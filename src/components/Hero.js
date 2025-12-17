@@ -1,4 +1,3 @@
-import React from "react"
 import styled from "styled-components"
 
 const HeroSection = styled.section`
@@ -32,6 +31,25 @@ const Title = styled.h1`
   
   @media (max-width: 768px) {
     font-size: 2.5rem;
+  }
+`
+
+const MissionStatement = styled.div`
+  font-size: 1.8rem;
+  color: #00E5FF;
+  margin: 1rem 0 2rem 0;
+  font-style: italic;
+  text-align: center;
+  max-width: 900px;
+  line-height: 1.4;
+  
+  strong {
+    color: #ffffff;
+    font-style: normal;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
   }
 `
 
@@ -129,6 +147,12 @@ const Hero = () => {
   return (
     <HeroSection>
       <Title>Make Every Government <span>Accountable</span></Title>
+      
+      <MissionStatement>
+        "Sunlight is the best disinfectant." 
+        <strong> A thriving Earth is the only goal.</strong>
+      </MissionStatement>
+      
       <Subtitle>
         An open-source platform tracking money, rhetoric, and outcomes across governments. 
         Starting with US campaign finance transparency. Built for journalists, researchers, and citizens.
