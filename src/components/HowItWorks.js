@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const HowItWorksContainer = styled.section`
   padding: 4rem 2rem;
   background: #0A1D3F;
-
+`;
 const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;

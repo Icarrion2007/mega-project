@@ -5,7 +5,7 @@ import moneyTrailData from '../data/moneyTrail.json';
 const StatsContainer = styled.section`
   padding: 3rem 2rem;
   background: linear-gradient(135deg, #152642 0%, #0A1D3F 100%);
-
+`;
 const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;

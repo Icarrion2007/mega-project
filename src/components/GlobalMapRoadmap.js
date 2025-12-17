@@ -5,7 +5,7 @@ const RoadmapContainer = styled.section`
   padding: 4rem 2rem;
   background: #0A1D3F;
   position: relative;
-
+`;
 const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
