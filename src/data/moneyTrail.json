@@ -1,58 +1,258 @@
 {
-  "fetched_at": "2025-12-13T09:17:39.469Z",
+  "fetched_at": "2025-12-17T09:05:36.793Z",
   "source": "Federal Election Commission (FEC)",
-  "endpoint": "/candidates/",
-  "note": "Initial test query with Presidential candidates",
+  "endpoint": "/schedules/schedule_a/",
+  "note": "Individual campaign contributions (>= $200), sorted by amount.",
   "results": [
     {
-      "name": "212 N HALF  W. JOHN, RODNEY HOWARD MR.",
-      "office": "President",
-      "party": "INDEPENDENT",
-      "state": "US",
-      "election_years": [
-        2024
-      ],
-      "candidate_id": "P40014052"
+      "contributor": "FUTURE FORWARD USA ACTION",
+      "amount": 90000000,
+      "date": "2024-10-17",
+      "recipient": "FF PAC",
+      "state": "DC",
+      "zip_code": "200034303",
+      "employer": null,
+      "occupation": null
     },
     {
-      "name": "375 ROB ROY DR, DAVID J SR SR",
-      "office": "President",
-      "party": "DEMOCRATIC PARTY",
-      "state": "US",
-      "election_years": [
-        2024
-      ],
-      "candidate_id": "P40013393"
+      "contributor": "EMPOWER PARENTS PAC",
+      "amount": 82500000,
+      "date": "2023-05-31",
+      "recipient": "NEVER BACK DOWN INC.",
+      "state": "FL",
+      "zip_code": "336062647",
+      "employer": null,
+      "occupation": null
     },
     {
-      "name": "375 ROB ROY DR, DAVID J SR SR",
-      "office": "President",
-      "party": "DEMOCRATIC PARTY",
-      "state": "US",
-      "election_years": [
-        2024
-      ],
-      "candidate_id": "P40013401"
+      "contributor": "FUND FOR POLICY REFORM",
+      "amount": 60000000,
+      "date": "2024-01-11",
+      "recipient": "DEMOCRACY PAC",
+      "state": "DE",
+      "zip_code": "19809",
+      "employer": null,
+      "occupation": null
     },
     {
-      "name": "753, JO",
-      "office": "President",
-      "party": "NONE",
-      "state": "US",
-      "election_years": [
-        2020
-      ],
-      "candidate_id": "P00011569"
+      "contributor": "SECURING AMERICAN GREATNESS",
+      "amount": 52558283.79,
+      "date": "2024-10-22",
+      "recipient": "MAKE AMERICA GREAT AGAIN INC.",
+      "state": "FL",
+      "zip_code": "33401",
+      "employer": null,
+      "occupation": null
     },
     {
-      "name": "AABBATTE, MICHAEL THOMAS WITORT",
-      "office": "President",
-      "party": "INDEPENDENT",
-      "state": "US",
-      "election_years": [
-        2004
-      ],
-      "candidate_id": "P40002172"
+      "contributor": "MELLON, TIMOTHY",
+      "amount": 50000000,
+      "date": "2024-07-15",
+      "recipient": "MAKE AMERICA GREAT AGAIN INC.",
+      "state": "WY",
+      "zip_code": "82331",
+      "employer": "SELF-EMPLOYED",
+      "occupation": "INVESTMENTS"
+    },
+    {
+      "contributor": "MELLON, TIMOTHY",
+      "amount": 50000000,
+      "date": "2024-05-31",
+      "recipient": "MAKE AMERICA GREAT AGAIN INC.",
+      "state": "WY",
+      "zip_code": "82331",
+      "employer": "SELF-EMPLOYED",
+      "occupation": "INVESTMENTS"
+    },
+    {
+      "contributor": "MUSK, ELON",
+      "amount": 40495178,
+      "date": "2024-11-25",
+      "recipient": "AMERICA PAC",
+      "state": "TX",
+      "zip_code": "787340277",
+      "employer": "SPACE EXPLORATION TECHNOLOGIES CORP.",
+      "occupation": "CEO"
+    },
+    {
+      "contributor": "FUTURE FORWARD USA ACTION",
+      "amount": 40000000,
+      "date": "2024-10-08",
+      "recipient": "FF PAC",
+      "state": "DC",
+      "zip_code": "200034303",
+      "employer": null,
+      "occupation": null
+    },
+    {
+      "contributor": "FUTURE FORWARD USA ACTION",
+      "amount": 40000000,
+      "date": "2024-09-25",
+      "recipient": "FF PAC",
+      "state": "DC",
+      "zip_code": "200034303",
+      "employer": null,
+      "occupation": null
+    },
+    {
+      "contributor": "FUTURE FORWARD USA ACTION",
+      "amount": 35000000,
+      "date": "2024-10-25",
+      "recipient": "FF PAC",
+      "state": "DC",
+      "zip_code": "200034303",
+      "employer": null,
+      "occupation": null
+    },
+    {
+      "contributor": "HOUSE MAJORITY FORWARD",
+      "amount": 34000000,
+      "date": "2024-09-30",
+      "recipient": "HMP",
+      "state": "DC",
+      "zip_code": "200051502",
+      "employer": null,
+      "occupation": null
+    },
+    {
+      "contributor": "MUSK, ELON",
+      "amount": 30000000,
+      "date": "2024-09-05",
+      "recipient": "AMERICA PAC",
+      "state": "TX",
+      "zip_code": "787340277",
+      "employer": "SPACE EXPLORATION TECHNOLOGIES CORP.",
+      "occupation": "CEO"
+    },
+    {
+      "contributor": "MAJORITY FORWARD",
+      "amount": 30000000,
+      "date": "2024-09-30",
+      "recipient": "SMP",
+      "state": "DC",
+      "zip_code": "200051502",
+      "employer": null,
+      "occupation": null
+    },
+    {
+      "contributor": "MAJORITY FORWARD",
+      "amount": 25000000,
+      "date": "2024-10-16",
+      "recipient": "SMP",
+      "state": "DC",
+      "zip_code": "200051502",
+      "employer": null,
+      "occupation": null
+    },
+    {
+      "contributor": "ADELSON, MIRIAM",
+      "amount": 25000000,
+      "date": "2024-09-09",
+      "recipient": "PRESERVE AMERICA PAC",
+      "state": "NV",
+      "zip_code": "89145",
+      "employer": "ADELSON CLINIC",
+      "occupation": "PHYSICIAN"
+    },
+    {
+      "contributor": "ADELSON, MIRIAM",
+      "amount": 25000000,
+      "date": "2024-08-13",
+      "recipient": "PRESERVE AMERICA PAC",
+      "state": "NV",
+      "zip_code": "89145",
+      "employer": "ADELSON CLINIC",
+      "occupation": "PHYSICIAN"
+    },
+    {
+      "contributor": "ADELSON, MIRIAM",
+      "amount": 25000000,
+      "date": "2024-07-26",
+      "recipient": "PRESERVE AMERICA PAC",
+      "state": "NV",
+      "zip_code": "89145",
+      "employer": "ADELSON CLINIC",
+      "occupation": "PHYSICIAN"
+    },
+    {
+      "contributor": "MELLON, TIMOTHY",
+      "amount": 25000000,
+      "date": "2024-09-17",
+      "recipient": "MAKE AMERICA GREAT AGAIN INC.",
+      "state": "WY",
+      "zip_code": "82331",
+      "employer": "SELF-EMPLOYED",
+      "occupation": "INVESTMENTS"
+    },
+    {
+      "contributor": "STAND TOGETHER CHAMBER OF COMMERCE",
+      "amount": 25000000,
+      "date": "2023-05-11",
+      "recipient": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "state": "VA",
+      "zip_code": "222012501",
+      "employer": null,
+      "occupation": null
+    },
+    {
+      "contributor": "KOCH INDUSTRIES INC.",
+      "amount": 25000000,
+      "date": "2023-05-19",
+      "recipient": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+      "state": "KS",
+      "zip_code": "672203203",
+      "employer": null,
+      "occupation": null
+    },
+    {
+      "contributor": "COINBASE COMMERCE (EXCHANGE)",
+      "amount": 25000000,
+      "date": "2024-06-03",
+      "recipient": "FAIRSHAKE",
+      "state": "CA",
+      "zip_code": "946074375",
+      "employer": null,
+      "occupation": null
+    },
+    {
+      "contributor": "RIPPLE LABS INC.",
+      "amount": 25000000,
+      "date": "2024-05-15",
+      "recipient": "FAIRSHAKE",
+      "state": "CA",
+      "zip_code": "941111817",
+      "employer": null,
+      "occupation": null
+    },
+    {
+      "contributor": "MUSK, ELON",
+      "amount": 25000000,
+      "date": "2024-10-31",
+      "recipient": "AMERICA PAC",
+      "state": "TX",
+      "zip_code": "787340277",
+      "employer": "SPACE EXPLORATION TECHNOLOGIES CORP.",
+      "occupation": "CEO"
+    },
+    {
+      "contributor": "MUSK, ELON",
+      "amount": 25000000,
+      "date": "2024-10-25",
+      "recipient": "AMERICA PAC",
+      "state": "TX",
+      "zip_code": "787340277",
+      "employer": "SPACE EXPLORATION TECHNOLOGIES CORP.",
+      "occupation": "CEO"
+    },
+    {
+      "contributor": "MUSK, ELON",
+      "amount": 25000000,
+      "date": "2024-10-18",
+      "recipient": "AMERICA PAC",
+      "state": "TX",
+      "zip_code": "787340277",
+      "employer": "SPACE EXPLORATION TECHNOLOGIES CORP.",
+      "occupation": "CEO"
     }
   ]
 }
