@@ -1,0 +1,58 @@
+{
+  "fetched_at": "2025-12-13T09:17:39.469Z",
+  "source": "Federal Election Commission (FEC)",
+  "endpoint": "/candidates/",
+  "note": "Initial test query with Presidential candidates",
+  "results": [
+    {
+      "name": "212 N HALF  W. JOHN, RODNEY HOWARD MR.",
+      "office": "President",
+      "party": "INDEPENDENT",
+      "state": "US",
+      "election_years": [
+        2024
+      ],
+      "candidate_id": "P40014052"
+    },
+    {
+      "name": "375 ROB ROY DR, DAVID J SR SR",
+      "office": "President",
+      "party": "DEMOCRATIC PARTY",
+      "state": "US",
+      "election_years": [
+        2024
+      ],
+      "candidate_id": "P40013393"
+    },
+    {
+      "name": "375 ROB ROY DR, DAVID J SR SR",
+      "office": "President",
+      "party": "DEMOCRATIC PARTY",
+      "state": "US",
+      "election_years": [
+        2024
+      ],
+      "candidate_id": "P40013401"
+    },
+    {
+      "name": "753, JO",
+      "office": "President",
+      "party": "NONE",
+      "state": "US",
+      "election_years": [
+        2020
+      ],
+      "candidate_id": "P00011569"
+    },
+    {
+      "name": "AABBATTE, MICHAEL THOMAS WITORT",
+      "office": "President",
+      "party": "INDEPENDENT",
+      "state": "US",
+      "election_years": [
+        2004
+      ],
+      "candidate_id": "P40002172"
+    }
+  ]
+}

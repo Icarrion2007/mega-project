@@ -1,0 +1,9 @@
+# Environment Variables (Contains API Keys!)
+.env.development
+.env.production
+.env
+
+# Gatsby & Node Build Directories
+node_modules/
+public/
+.cache/
