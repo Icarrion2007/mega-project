@@ -14,6 +14,13 @@ const ChartTitle = styled.h3`
   color: #2c3e50;
   border-bottom: 2px solid #4a6fa5;
   padding-bottom: 0.75rem;
+  font-size: 1.3rem;
+`;
+
+const ChartDescription = styled.p`
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
 `;
 
 const SizeBar = styled.div`
@@ -24,6 +31,7 @@ const SizeBar = styled.div`
   background: #f0f0f0;
   border-radius: 8px;
   overflow: hidden;
+  position: relative;
 `;
 
 const BarSegment = styled.div`
@@ -37,13 +45,46 @@ const BarSegment = styled.div`
   font-weight: bold;
   font-size: 0.9rem;
   transition: width 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: ${props => props.percentage < 10 ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.1)'};
+    z-index: -1;
+  }
+`;
+
+const CategoryHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+`;
+
+const CategoryLabel = styled.span`
+  font-weight: 600;
+  color: #2c3e50;
+`;
+
+const CategoryStats = styled.span`
+  color: #666;
+  font-weight: 500;
 `;
 
 const Legend = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
 `;
 
 const LegendItem = styled.div`
@@ -58,6 +99,11 @@ const LegendColor = styled.div`
   height: 16px;
   border-radius: 4px;
   background: ${props => props.color};
+  border: 1px solid rgba(0,0,0,0.1);
+`;
+
+const LegendText = styled.span`
+  color: #444;
 `;
 
 const ContributionSizeChart = ({ data }) => {
@@ -85,24 +131,41 @@ const ContributionSizeChart = ({ data }) => {
   return (
     <ChartContainer>
       <ChartTitle>💰 Contribution Size Distribution</ChartTitle>
-      <p>How political money flows by contribution size</p>
+      <ChartDescription>How political money flows by contribution size</ChartDescription>
       
       {categories.map((cat, index) => {
         const percentage = total > 0 ? (counts[index] / total) * 100 : 0;
+        const hasText = percentage > 8; // Only show text if bar is wide enough
+        
         return (
-          <div key={index} style={{ marginBottom: '1rem' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-              <span><strong>{cat.label}</strong></span>
-              <span>{counts[index]} contributions ({percentage.toFixed(1)}%)</span>
-            </div>
+          <div key={index} style={{ marginBottom: '1.5rem' }}>
+            <CategoryHeader>
+              <CategoryLabel>{cat.label}</CategoryLabel>
+              <CategoryStats>
+                {counts[index]} contribution{counts[index] !== 1 ? 's' : ''} ({percentage.toFixed(1)}%)
+              </CategoryStats>
+            </CategoryHeader>
             <SizeBar>
               <BarSegment 
                 color={cat.color} 
                 percentage={percentage}
-                title={`${counts[index]} contributions in ${cat.label} range`}
+                title={`${counts[index]} contributions (${percentage.toFixed(1)}%) in ${cat.label} range`}
               >
-                {percentage > 10 ? `${percentage.toFixed(0)}%` : ''}
+                {hasText ? `${percentage.toFixed(0)}%` : ''}
               </BarSegment>
+              {!hasText && percentage > 0 && (
+                <div style={{
+                  position: 'absolute',
+                  left: `${percentage}%`,
+                  transform: 'translateX(4px)',
+                  color: cat.color,
+                  fontWeight: 'bold',
+                  fontSize: '0.85rem',
+                  whiteSpace: 'nowrap'
+                }}>
+                  {percentage.toFixed(0)}%
+                </div>
+              )}
             </SizeBar>
           </div>
         );
@@ -112,7 +175,7 @@ const ContributionSizeChart = ({ data }) => {
         {categories.map((cat, index) => (
           <LegendItem key={index}>
             <LegendColor color={cat.color} />
-            <span>{cat.label}</span>
+            <LegendText>{cat.label}</LegendText>
           </LegendItem>
         ))}
       </Legend>
