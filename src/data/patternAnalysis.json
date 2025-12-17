@@ -1,0 +1,150 @@
+{
+  "summary": {
+    "totalContributions": 25,
+    "totalAmount": 934553461.79,
+    "averageContribution": 37382138.471599996,
+    "dateRange": {
+      "start": "2023-05-11",
+      "end": "2024-11-25"
+    }
+  },
+  "temporalAnalysis": {
+    "peakDays": [
+      {
+        "date": "2024-10-25",
+        "count": 2
+      },
+      {
+        "date": "2024-09-30",
+        "count": 2
+      },
+      {
+        "date": "2024-10-17",
+        "count": 1
+      },
+      {
+        "date": "2023-05-31",
+        "count": 1
+      },
+      {
+        "date": "2024-01-11",
+        "count": 1
+      }
+    ],
+    "dailyAverage": 1.0869565217391304
+  },
+  "networkAnalysis": {
+    "hubCount": 0,
+    "topHubs": [],
+    "uniqueContributors": 13
+  },
+  "sectorAnalysis": {
+    "Other/Unknown": {
+      "total": 664058283.79,
+      "count": 17
+    },
+    "Finance": {
+      "total": 125000000,
+      "count": 3
+    },
+    "Technology": {
+      "total": 145495178,
+      "count": 5
+    }
+  },
+  "geographicAnalysis": {
+    "topStates": [
+      {
+        "state": "DC",
+        "total": 294000000,
+        "count": 7
+      },
+      {
+        "state": "TX",
+        "total": 145495178,
+        "count": 5
+      },
+      {
+        "state": "FL",
+        "total": 135058283.79,
+        "count": 2
+      },
+      {
+        "state": "WY",
+        "total": 125000000,
+        "count": 3
+      },
+      {
+        "state": "NV",
+        "total": 75000000,
+        "count": 3
+      }
+    ],
+    "stateCount": 9
+  },
+  "recipientAnalysis": {
+    "topRecipients": [
+      {
+        "name": "FF PAC",
+        "total": 205000000,
+        "count": 4,
+        "avgAmount": 51250000
+      },
+      {
+        "name": "MAKE AMERICA GREAT AGAIN INC.",
+        "total": 177558283.79,
+        "count": 4,
+        "avgAmount": 44389570.9475
+      },
+      {
+        "name": "AMERICA PAC",
+        "total": 145495178,
+        "count": 5,
+        "avgAmount": 29099035.6
+      },
+      {
+        "name": "NEVER BACK DOWN INC.",
+        "total": 82500000,
+        "count": 1,
+        "avgAmount": 82500000
+      },
+      {
+        "name": "PRESERVE AMERICA PAC",
+        "total": 75000000,
+        "count": 3,
+        "avgAmount": 25000000
+      },
+      {
+        "name": "DEMOCRACY PAC",
+        "total": 60000000,
+        "count": 1,
+        "avgAmount": 60000000
+      },
+      {
+        "name": "SMP",
+        "total": 55000000,
+        "count": 2,
+        "avgAmount": 27500000
+      },
+      {
+        "name": "AMERICANS FOR PROSPERITY ACTION, INC. (AFP ACTION) DBA CVA ACTION AND DBA LIBRE ACTION",
+        "total": 50000000,
+        "count": 2,
+        "avgAmount": 25000000
+      },
+      {
+        "name": "FAIRSHAKE",
+        "total": 50000000,
+        "count": 2,
+        "avgAmount": 25000000
+      },
+      {
+        "name": "HMP",
+        "total": 34000000,
+        "count": 1,
+        "avgAmount": 34000000
+      }
+    ],
+    "uniqueRecipients": 10
+  }
+}
