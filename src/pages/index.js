@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
 import TriangulationPreview from "../components/TriangulationPreview"
+import GlobalMapRoadmap from "../components/GlobalMapRoadmap"  // NEW IMPORT
 import Vision from "../components/Vision"
 import Footer from "../components/Footer"
 
@@ -19,6 +20,7 @@ const IndexPage = () => {
       <Header />
       <Hero />
       <TriangulationPreview />
+      <GlobalMapRoadmap />  {/* ADDED HERE - shows Phase 4 roadmap */}
       <Vision />
       <Footer />
     </Container>
