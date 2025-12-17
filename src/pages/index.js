@@ -7,6 +7,7 @@ import QuickStats from "../components/QuickStats"
 import VisualizationHub from "../components/VisualizationHub"
 import TriangulationPreview from "../components/TriangulationPreview"
 import HowItWorks from "../components/HowItWorks"
+import Principles from "../components/Principles"  // NEW IMPORT
 import Vision from "../components/Vision"
 import Footer from "../components/Footer"
 import moneyTrailData from "../data/moneyTrail.json"
@@ -28,6 +29,7 @@ const IndexPage = () => {
       <VisualizationHub data={moneyTrailData.results} />
       <TriangulationPreview />
       <HowItWorks />
+      <Principles />      {/* ADDED HERE - Moral foundation */}
       <Vision />
       <Footer />
     </Container>
