@@ -26,7 +26,6 @@
     "gatsby-plugin-react-helmet": "^6.15.0",
     "gatsby-plugin-sharp": "^5.15.0",
     "gatsby-plugin-styled-components": "^6.15.0",
-    "gatsby-source-filesystem": "^5.15.0",
     "gatsby-transformer-sharp": "^5.15.0",
     "node-fetch": "^2.7.0",
     "react": "^18.3.1",
