@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-12-20T00:25:57.757Z",
+  "environment": "development",
+  "checks": [
+    {
+      "check": "FEC_API_KEY present",
+      "passed": false,
+      "details": "Not found in environment"
+    },
+    {
+      "check": "FEC API test",
+      "passed": false,
+      "details": "Skipped - no API key"
+    },
+    {
+      "check": "fetch-money-trail.js execution",
+      "passed": false,
+      "details": {
+        "stdoutLength": 60,
+        "stderrLength": 0,
+        "hasErrors": false
+      }
+    },
+    {
+      "check": "Data file exists and valid",
+      "passed": true,
+      "details": {
+        "size": 613,
+        "records": 1,
+        "total": 1000000,
+        "type": "unknown"
+      }
+    }
+  ]
+}

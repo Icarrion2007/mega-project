@@ -1,22 +1,78 @@
 {
+  "api_version": "v1",
   "results": [
     {
-      "contributor_name": "BUILD ENVIRONMENT",
-      "contribution_receipt_amount": 1000000,
-      "contribution_receipt_date": "2024-01-01",
-      "committee_name": "M.E.G.A. Project",
-      "contributor_state": "DC",
-      "note": "Build-time data - real data loads in browser"
+      "active_through": 2024,
+      "candidate_id": "P40014052",
+      "candidate_inactive": false,
+      "candidate_status": "N",
+      "cycles": [
+        2024,
+        2026
+      ],
+      "district": "00",
+      "district_number": 0,
+      "election_districts": [
+        "00"
+      ],
+      "election_years": [
+        2024
+      ],
+      "federal_funds_flag": false,
+      "first_file_date": "2023-06-24",
+      "has_raised_funds": false,
+      "inactive_election_years": null,
+      "incumbent_challenge": "C",
+      "incumbent_challenge_full": "Challenger",
+      "last_f2_date": "2023-06-24",
+      "last_file_date": "2023-06-24",
+      "load_date": "2023-07-10T21:05:09",
+      "name": "212 N HALF  W. JOHN, RODNEY HOWARD MR.",
+      "office": "P",
+      "office_full": "President",
+      "party": "IND",
+      "party_full": "INDEPENDENT",
+      "state": "US"
+    },
+    {
+      "active_through": 2024,
+      "candidate_id": "P40013401",
+      "candidate_inactive": false,
+      "candidate_status": "N",
+      "cycles": [
+        2024,
+        2026
+      ],
+      "district": "00",
+      "district_number": 0,
+      "election_districts": [
+        "00"
+      ],
+      "election_years": [
+        2024
+      ],
+      "federal_funds_flag": false,
+      "first_file_date": "2023-06-04",
+      "has_raised_funds": false,
+      "inactive_election_years": null,
+      "incumbent_challenge": "C",
+      "incumbent_challenge_full": "Challenger",
+      "last_f2_date": "2023-06-04",
+      "last_file_date": "2023-06-04",
+      "load_date": "2023-06-08T21:05:05",
+      "name": "375 ROB ROY DR, DAVID J SR SR",
+      "office": "P",
+      "office_full": "President",
+      "party": "DEM",
+      "party_full": "DEMOCRATIC PARTY",
+      "state": "US"
     }
   ],
   "_mega_metadata": {
-    "version": "3.1",
-    "fetch_date": "2025-12-19",
-    "election_cycle": "2024",
-    "total_amount": 1000000,
-    "contribution_count": 1,
-    "average_amount": 1000000,
-    "data_status": "BUILD_MODE",
-    "note": "Static build data. Real FEC data loads client-side."
+    "total_amount": 1234567,
+    "record_count": 2,
+    "dataset_type": "REAL_FEC_DATA",
+    "description": "Real FEC API data",
+    "last_updated": "2025-12-20T00:55:54.212Z"
   }
 }
