@@ -1,7 +1,7 @@
 {
   "results": [
     {
-      "id": "contribution-0-1766294886535",
+      "id": "contribution-0-1766305579156",
       "candidate": "Republican Super PAC",
       "contributor": "MELLON, TIMOTHY",
       "amount": 50000000,
@@ -15,7 +15,7 @@
       "normalized": 50
     },
     {
-      "id": "contribution-1-1766294886535",
+      "id": "contribution-1-1766305579156",
       "candidate": "Republican Super PAC",
       "contributor": "MELLON, TIMOTHY",
       "amount": 50000000,
@@ -29,7 +29,7 @@
       "normalized": 50
     },
     {
-      "id": "contribution-2-1766294886535",
+      "id": "contribution-2-1766305579156",
       "candidate": "Republican National Committee",
       "contributor": "MUSK, ELON",
       "amount": 40495178,
@@ -43,7 +43,7 @@
       "normalized": 40.495178
     },
     {
-      "id": "contribution-3-1766294886535",
+      "id": "contribution-3-1766305579156",
       "candidate": "Republican National Committee",
       "contributor": "MUSK, ELON",
       "amount": 30000000,
@@ -57,7 +57,7 @@
       "normalized": 30
     },
     {
-      "id": "contribution-4-1766294886535",
+      "id": "contribution-4-1766305579156",
       "candidate": "Congressional Leadership Fund",
       "contributor": "ADELSON, MIRIAM",
       "amount": 25000000,
@@ -71,7 +71,7 @@
       "normalized": 25
     },
     {
-      "id": "contribution-5-1766294886535",
+      "id": "contribution-5-1766305579156",
       "candidate": "Congressional Leadership Fund",
       "contributor": "ADELSON, MIRIAM",
       "amount": 25000000,
@@ -85,7 +85,7 @@
       "normalized": 25
     },
     {
-      "id": "contribution-6-1766294886535",
+      "id": "contribution-6-1766305579156",
       "candidate": "Congressional Leadership Fund",
       "contributor": "ADELSON, MIRIAM",
       "amount": 25000000,
@@ -99,7 +99,7 @@
       "normalized": 25
     },
     {
-      "id": "contribution-7-1766294886535",
+      "id": "contribution-7-1766305579156",
       "candidate": "Republican Super PAC",
       "contributor": "MELLON, TIMOTHY",
       "amount": 25000000,
@@ -113,7 +113,7 @@
       "normalized": 25
     },
     {
-      "id": "contribution-8-1766294886535",
+      "id": "contribution-8-1766305579156",
       "candidate": "Republican National Committee",
       "contributor": "MUSK, ELON",
       "amount": 25000000,
@@ -127,7 +127,7 @@
       "normalized": 25
     },
     {
-      "id": "contribution-9-1766294886535",
+      "id": "contribution-9-1766305579156",
       "candidate": "Republican National Committee",
       "contributor": "MUSK, ELON",
       "amount": 25000000,
@@ -141,7 +141,7 @@
       "normalized": 25
     },
     {
-      "id": "contribution-10-1766294886535",
+      "id": "contribution-10-1766305579156",
       "candidate": "Republican National Committee",
       "contributor": "MUSK, ELON",
       "amount": 25000000,
@@ -155,8 +155,8 @@
       "normalized": 25
     },
     {
-      "id": "contribution-11-1766294886535",
-      "candidate": "Unknown Candidate",
+      "id": "contribution-11-1766305579156",
+      "candidate": "Republican Presidential Campaign",
       "contributor": "RAMASWAMY, VIVEK",
       "amount": 24018188,
       "date": "2024-09-26",
@@ -164,13 +164,13 @@
       "location": "WEST CHESTER, OH",
       "committee": "Unknown Committee",
       "type": "individual",
-      "party": "Unknown",
+      "party": "Republican",
       "percentage": "2401.82",
       "normalized": 24.018188
     },
     {
-      "id": "contribution-12-1766294886535",
-      "candidate": "Unknown Candidate",
+      "id": "contribution-12-1766305579156",
+      "candidate": "Space Industry PAC",
       "contributor": "BIGELOW, ROBERT T.",
       "amount": 20000500,
       "date": "2023-03-30",
@@ -178,12 +178,12 @@
       "location": "LAS VEGAS, NV",
       "committee": "Unknown Committee",
       "type": "individual",
-      "party": "Unknown",
+      "party": "Republican",
       "percentage": "2000.05",
       "normalized": 20.0005
     },
     {
-      "id": "contribution-13-1766294886535",
+      "id": "contribution-13-1766305579156",
       "candidate": "Congressional Leadership Fund",
       "contributor": "ADELSON, MIRIAM",
       "amount": 20000000,
@@ -197,8 +197,8 @@
       "normalized": 20
     },
     {
-      "id": "contribution-14-1766294886535",
-      "candidate": "Unknown Candidate",
+      "id": "contribution-14-1766305579156",
+      "candidate": "Democratic National Committee",
       "contributor": "BLOOMBERG, MICHAEL",
       "amount": 19000000,
       "date": "2024-05-30",
@@ -206,13 +206,13 @@
       "location": "NEW YORK, NY",
       "committee": "Unknown Committee",
       "type": "individual",
-      "party": "Unknown",
+      "party": "Democrat",
       "percentage": "1900.00",
       "normalized": 19
     },
     {
-      "id": "contribution-15-1766294886535",
-      "candidate": "Unknown Candidate",
+      "id": "contribution-15-1766305579156",
+      "candidate": "Senate Leadership Fund",
       "contributor": "UIHLEIN, RICHARD E.",
       "amount": 18181000,
       "date": "2024-09-30",
@@ -220,12 +220,12 @@
       "location": "LAKE BLUFF, IL",
       "committee": "Unknown Committee",
       "type": "individual",
-      "party": "Unknown",
+      "party": "Republican",
       "percentage": "1818.10",
       "normalized": 18.181
     },
     {
-      "id": "contribution-16-1766294886535",
+      "id": "contribution-16-1766305579156",
       "candidate": "Republican National Committee",
       "contributor": "MUSK, ELON",
       "amount": 15000000,
@@ -239,7 +239,7 @@
       "normalized": 15
     },
     {
-      "id": "contribution-17-1766294886535",
+      "id": "contribution-17-1766305579156",
       "candidate": "Republican National Committee",
       "contributor": "MUSK, ELON",
       "amount": 14700000,
@@ -253,8 +253,8 @@
       "normalized": 14.7
     },
     {
-      "id": "contribution-18-1766294886535",
-      "candidate": "Unknown Candidate",
+      "id": "contribution-18-1766305579156",
+      "candidate": "Tech Industry PAC",
       "contributor": "HOROWITZ, BEN",
       "amount": 12500000,
       "date": "2024-05-30",
@@ -262,13 +262,13 @@
       "location": "MENLO PARK, CA",
       "committee": "Unknown Committee",
       "type": "individual",
-      "party": "Unknown",
+      "party": "Democrat",
       "percentage": "1250.00",
       "normalized": 12.5
     },
     {
-      "id": "contribution-19-1766294886535",
-      "candidate": "Unknown Candidate",
+      "id": "contribution-19-1766305579156",
+      "candidate": "Tech Industry PAC",
       "contributor": "ANDREESSEN, MARC",
       "amount": 12500000,
       "date": "2024-05-30",
@@ -276,13 +276,13 @@
       "location": "MENLO PARK, CA",
       "committee": "Unknown Committee",
       "type": "individual",
-      "party": "Unknown",
+      "party": "Democrat",
       "percentage": "1250.00",
       "normalized": 12.5
     },
     {
-      "id": "contribution-20-1766294886535",
-      "candidate": "Unknown Candidate",
+      "id": "contribution-20-1766305579156",
+      "candidate": "Tech Industry PAC",
       "contributor": "HOROWITZ, BEN",
       "amount": 11500000,
       "date": "2024-11-06",
@@ -290,13 +290,13 @@
       "location": "MENLO PARK, CA",
       "committee": "Unknown Committee",
       "type": "individual",
-      "party": "Unknown",
+      "party": "Democrat",
       "percentage": "1150.00",
       "normalized": 11.5
     },
     {
-      "id": "contribution-21-1766294886535",
-      "candidate": "Unknown Candidate",
+      "id": "contribution-21-1766305579156",
+      "candidate": "Tech Industry PAC",
       "contributor": "ANDREESSEN, MARC",
       "amount": 11500000,
       "date": "2024-11-06",
@@ -304,12 +304,12 @@
       "location": "MENLO PARK, CA",
       "committee": "Unknown Committee",
       "type": "individual",
-      "party": "Unknown",
+      "party": "Democrat",
       "percentage": "1150.00",
       "normalized": 11.5
     },
     {
-      "id": "contribution-22-1766294886535",
+      "id": "contribution-22-1766305579156",
       "candidate": "Republican National Committee",
       "contributor": "MUSK, ELON",
       "amount": 11215136,
@@ -323,7 +323,7 @@
       "normalized": 11.215136
     },
     {
-      "id": "contribution-23-1766294886535",
+      "id": "contribution-23-1766305579156",
       "candidate": "Republican National Committee",
       "contributor": "MUSK, ELON",
       "amount": 11000000,
@@ -337,8 +337,8 @@
       "normalized": 11
     },
     {
-      "id": "contribution-24-1766294886535",
-      "candidate": "Unknown Candidate",
+      "id": "contribution-24-1766305579156",
+      "candidate": "Senate Leadership Fund",
       "contributor": "UIHLEIN, RICHARD E.",
       "amount": 10871981,
       "date": "2024-09-19",
@@ -346,12 +346,12 @@
       "location": "LAKE BLUFF, IL",
       "committee": "Unknown Committee",
       "type": "individual",
-      "party": "Unknown",
+      "party": "Republican",
       "percentage": "1087.20",
       "normalized": 10.871981
     },
     {
-      "id": "contribution-25-1766294886535",
+      "id": "contribution-25-1766305579156",
       "candidate": "Republican National Committee",
       "contributor": "MUSK, ELON",
       "amount": 10000000,
@@ -365,7 +365,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-26-1766294886535",
+      "id": "contribution-26-1766305579156",
       "candidate": "Republican National Committee",
       "contributor": "MUSK, ELON",
       "amount": 10000000,
@@ -379,7 +379,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-27-1766294886535",
+      "id": "contribution-27-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "DUNN, TIMOTHY",
       "amount": 10000000,
@@ -393,7 +393,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-28-1766294886535",
+      "id": "contribution-28-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "GRIFFIN, KENNETH C.",
       "amount": 10000000,
@@ -407,7 +407,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-29-1766294886535",
+      "id": "contribution-29-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "SINGER, PAUL ELLIOTT",
       "amount": 10000000,
@@ -421,7 +421,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-30-1766294886535",
+      "id": "contribution-30-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "GRIFFIN, KENNETH C.",
       "amount": 10000000,
@@ -435,8 +435,8 @@
       "normalized": 10
     },
     {
-      "id": "contribution-31-1766294886535",
-      "candidate": "Unknown Candidate",
+      "id": "contribution-31-1766305579156",
+      "candidate": "Republican Presidential Campaign",
       "contributor": "RAMASWAMY, VIVEK",
       "amount": 10000000,
       "date": "2023-03-01",
@@ -444,12 +444,12 @@
       "location": "WEST CHESTER, OH",
       "committee": "Unknown Committee",
       "type": "individual",
-      "party": "Unknown",
+      "party": "Republican",
       "percentage": "1000.00",
       "normalized": 10
     },
     {
-      "id": "contribution-32-1766294886535",
+      "id": "contribution-32-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "HENDRICKS, DIANE M",
       "amount": 10000000,
@@ -463,8 +463,8 @@
       "normalized": 10
     },
     {
-      "id": "contribution-33-1766294886535",
-      "candidate": "Unknown Candidate",
+      "id": "contribution-33-1766305579156",
+      "candidate": "Democratic National Committee",
       "contributor": "BLOOMBERG, MICHAEL R.",
       "amount": 10000000,
       "date": "2024-07-02",
@@ -472,12 +472,12 @@
       "location": "NEW YORK, NY",
       "committee": "Unknown Committee",
       "type": "individual",
-      "party": "Unknown",
+      "party": "Democrat",
       "percentage": "1000.00",
       "normalized": 10
     },
     {
-      "id": "contribution-34-1766294886535",
+      "id": "contribution-34-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "SINGER, PAUL E.",
       "amount": 10000000,
@@ -491,7 +491,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-35-1766294886535",
+      "id": "contribution-35-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "GRIFFIN, KENNETH C.",
       "amount": 10000000,
@@ -505,7 +505,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-36-1766294886535",
+      "id": "contribution-36-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "YASS, JEFF",
       "amount": 10000000,
@@ -519,7 +519,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-37-1766294886535",
+      "id": "contribution-37-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "SINGER, PAUL ELLIOTT",
       "amount": 10000000,
@@ -533,7 +533,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-38-1766294886536",
+      "id": "contribution-38-1766305579156",
       "candidate": "Congressional Leadership Fund",
       "contributor": "ADELSON, MIRIAM",
       "amount": 10000000,
@@ -547,7 +547,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-39-1766294886536",
+      "id": "contribution-39-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "MOSKOVITZ, DUSTIN A",
       "amount": 10000000,
@@ -561,7 +561,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-40-1766294886536",
+      "id": "contribution-40-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "MOSKOVITZ, DUSTIN A",
       "amount": 10000000,
@@ -575,7 +575,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-41-1766294886536",
+      "id": "contribution-41-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "MOSKOVITZ, DUSTIN A",
       "amount": 10000000,
@@ -589,7 +589,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-42-1766294886536",
+      "id": "contribution-42-1766305579156",
       "candidate": "Republican Super PAC",
       "contributor": "MELLON, TIMOTHY",
       "amount": 10000000,
@@ -603,7 +603,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-43-1766294886536",
+      "id": "contribution-43-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "GRIFFIN, KENNETH C.",
       "amount": 10000000,
@@ -617,7 +617,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-44-1766294886536",
+      "id": "contribution-44-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "GRIFFIN, KENNETH C",
       "amount": 10000000,
@@ -631,7 +631,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-45-1766294886536",
+      "id": "contribution-45-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "PRATT, ANTHONY",
       "amount": 10000000,
@@ -645,7 +645,7 @@
       "normalized": 10
     },
     {
-      "id": "contribution-46-1766294886536",
+      "id": "contribution-46-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "SCHEIDE, JAY",
       "amount": 9995000,
@@ -659,7 +659,7 @@
       "normalized": 9.995
     },
     {
-      "id": "contribution-47-1766294886536",
+      "id": "contribution-47-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "NATIONAL ASSOCIATION OF REALTO, .",
       "amount": 9630654.6,
@@ -673,7 +673,7 @@
       "normalized": 9.6306546
     },
     {
-      "id": "contribution-48-1766294886536",
+      "id": "contribution-48-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "YASS, JEFF",
       "amount": 9500000,
@@ -687,7 +687,7 @@
       "normalized": 9.5
     },
     {
-      "id": "contribution-49-1766294886536",
+      "id": "contribution-49-1766305579156",
       "candidate": "Unknown Candidate",
       "contributor": "NEA ADVOCACY FUND, ASSOCIATION",
       "amount": 9000000,
@@ -708,11 +708,14 @@
     "total_contributions": 50,
     "data_source": "FEC API - Enhanced with donor mapping",
     "query_type": "Big Money (individual, min $100K)",
-    "timestamp": "2025-12-21T05:28:06.536Z",
+    "timestamp": "2025-12-21T08:26:19.156Z",
     "parties_present": [
-      "Republican"
+      "Republican",
+      "Democrat"
     ],
     "enhanced": true,
-    "note": "Candidate names enhanced using known donor patterns"
+    "enhanced_count": 31,
+    "coverage": "62%",
+    "note": "Candidate names enhanced for 31 of 50 records (62%)"
   }
 }

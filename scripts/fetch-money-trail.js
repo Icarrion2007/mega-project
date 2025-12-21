@@ -10,9 +10,14 @@ const DONOR_MAPPING = {
   'MELLON, TIMOTHY': { candidate: 'Republican Super PAC', party: 'Republican' },
   'MUSK, ELON': { candidate: 'Republican National Committee', party: 'Republican' },
   'ADELSON, MIRIAM': { candidate: 'Congressional Leadership Fund', party: 'Republican' },
-  'UHLINE, RICHARD': { candidate: 'Senate Leadership Fund', party: 'Republican' },
-  'SIMONS, JAMES': { candidate: 'Senate Majority PAC', party: 'Democrat' },
-  'SOROS, GEORGE': { candidate: 'Democratic Super PAC', party: 'Democrat' }
+  'UIHLEIN, RICHARD': { candidate: 'Senate Leadership Fund', party: 'Republican' },
+  'BLOOMBERG, MICHAEL': { candidate: 'Democratic National Committee', party: 'Democrat' },
+  'RAMASWAMY, VIVEK': { candidate: 'Republican Presidential Campaign', party: 'Republican' },
+  'BIGELOW, ROBERT': { candidate: 'Space Industry PAC', party: 'Republican' },
+  'HOROWITZ, BEN': { candidate: 'Tech Industry PAC', party: 'Democrat' },
+  'ANDREESSEN, MARC': { candidate: 'Tech Industry PAC', party: 'Democrat' },
+  'SOROS, GEORGE': { candidate: 'Democratic Super PAC', party: 'Democrat' },
+  'SIMONS, JAMES': { candidate: 'Senate Majority PAC', party: 'Democrat' }
 };
 
 async function fetchBigMoneyContributions() {
@@ -43,6 +48,8 @@ function processContributions(contributions) {
   }
 
   console.log(`✅ Found ${contributions.length} contributions`);
+  
+  let enhancedCount = 0;
   const processed = contributions.map((item, index) => {
     const amount = item.contribution_receipt_amount || 0;
     const contributor = item.contributor_name || 'Anonymous';
@@ -51,9 +58,10 @@ function processContributions(contributions) {
     let party = 'Unknown';
     
     for (const [donor, info] of Object.entries(DONOR_MAPPING)) {
-      if (contributor.includes(donor.split(',')[0])) {
+      if (contributor.toUpperCase().includes(donor.split(',')[0].toUpperCase())) {
         candidate = info.candidate;
         party = info.party;
+        enhancedCount++;
         break;
       }
     }
@@ -83,6 +91,7 @@ function processContributions(contributions) {
   const averageAmount = totalAmount / processed.length;
   const biggestDonation = Math.max(...processed.map(item => item.amount));
   const parties = [...new Set(processed.map(p => p.party))].filter(p => p !== 'Unknown');
+  const coverage = enhancedCount > 0 ? `${Math.round((enhancedCount / processed.length) * 100)}%` : '0%';
 
   return {
     results: processed,
@@ -95,8 +104,10 @@ function processContributions(contributions) {
       query_type: 'Big Money (individual, min $100K)',
       timestamp: new Date().toISOString(),
       parties_present: parties,
-      enhanced: true,
-      note: 'Candidate names enhanced using known donor patterns'
+      enhanced: enhancedCount > 0,
+      enhanced_count: enhancedCount,
+      coverage: coverage,
+      note: `Candidate names enhanced for ${enhancedCount} of ${processed.length} records (${coverage})`
     }
   };
 }
@@ -108,13 +119,13 @@ function generateEducationalData() {
       id: 'edu-1', candidate: 'Example Candidate A', contributor: 'Major Corporation LLC',
       amount: 5000000, date: '2024-03-15', employer: 'Finance Industry',
       location: 'New York, NY', committee: 'Victory PAC', type: 'corporate',
-      percentage: '500.00', normalized: 5
+      percentage: '500.00', normalized: 5, party: 'Corporate'
     },
     {
       id: 'edu-2', candidate: 'Example Candidate B', contributor: 'Tech Executive',
       amount: 2500000, date: '2024-02-28', employer: 'Silicon Valley Corp',
       location: 'San Francisco, CA', committee: 'Future Fund', type: 'individual',
-      percentage: '250.00', normalized: 2.5
+      percentage: '250.00', normalized: 2.5, party: 'Tech'
     }
   ];
 
@@ -124,7 +135,9 @@ function generateEducationalData() {
       total_amount: 935000000, average_amount: 187000000,
       biggest_donation: 500000000, total_contributions: educationalData.length,
       data_source: 'Educational Dataset', query_type: 'Example Data',
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(), parties_present: ['Corporate', 'Tech'],
+      enhanced: false, enhanced_count: 0, coverage: '0%',
+      note: 'Educational example data'
     }
   };
 }
@@ -144,6 +157,7 @@ async function main() {
     
     if (processedData._mega_metadata.enhanced) {
       console.log(`🎭 Parties: ${processedData._mega_metadata.parties_present.join(', ')}`);
+      console.log(`📈 Coverage: ${processedData._mega_metadata.coverage} enhanced`);
       console.log(`📝 Note: ${processedData._mega_metadata.note}`);
     }
 
