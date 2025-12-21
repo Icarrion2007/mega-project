@@ -1,0 +1,87 @@
+=== M.E.G.A. PROJECT DIAGNOSTIC ===
+Timestamp: Sun Dec 21 14:44:38 AUSEDT 2025
+
+1. Node.js Environment:
+v24.11.1
+11.6.2
+
+2. Project Structure:
+total 1046
+drwxr-xr-x 1 tgibb 197609      0 Dec 21 14:44 .
+drwxr-xr-x 1 tgibb 197609      0 Dec 21 13:23 ..
+drwxr-xr-x 1 tgibb 197609      0 Dec 20 11:42 .cache
+-rw-r--r-- 1 tgibb 197609     53 Dec 19 22:38 .env
+-rw-r--r-- 1 tgibb 197609     52 Dec 20 11:51 .env.development
+-rw-r--r-- 1 tgibb 197609     53 Dec 20 11:52 .env.development~
+drwxr-xr-x 1 tgibb 197609      0 Dec 20 12:26 .git
+-rw-r--r-- 1 tgibb 197609    155 Dec 13 20:23 .gitignore
+-rw-r--r-- 1 tgibb 197609    144 Dec 21 14:44 diagnostic-report.txt
+-rwxr-xr-x 1 tgibb 197609    830 Dec 21 14:44 diagnostic.sh
+-rw-r--r-- 1 tgibb 197609    921 Dec 19 23:02 direct_api_test.js
+-rw-r--r-- 1 tgibb 197609    511 Dec 20 09:01 gatsby-config.js
+-rw-r--r-- 1 tgibb 197609    793 Dec 20 10:53 gatsby-node.js
+drwxr-xr-x 1 tgibb 197609      0 Dec 20 00:18 node_modules
+-rw-r--r-- 1 tgibb 197609 698435 Dec 20 00:21 package-lock.json
+-rw-r--r-- 1 tgibb 197609   1011 Dec 20 08:59 package.json
+-rw-r--r-- 1 tgibb 197609    857 Dec 20 00:13 package.json.backup
+-rw-r--r-- 1 tgibb 197609    857 Dec 20 00:03 package.json.corrupted
+drwxr-xr-x 1 tgibb 197609      0 Dec 20 11:42 public
+drwxr-xr-x 1 tgibb 197609      0 Dec 20 12:25 scripts
+drwxr-xr-x 1 tgibb 197609      0 Dec 13 20:05 src
+-rw-r--r-- 1 tgibb 197609   1870 Dec 19 22:43 test_fec_key.js
+-rw-r--r-- 1 tgibb 197609   1585 Dec 19 22:51 test_fec_key_simple.js
+-rw-r--r-- 1 tgibb 197609    115 Dec 20 09:20 vercel-force-deploy.md
+-rw-r--r-- 1 tgibb 197609    716 Dec 20 11:25 verification-results.json
+
+3. Package Dependencies:
+mega-project@0.1.0 C:\mega-project
+├── dotenv@17.2.3
+├── gatsby-plugin-image@3.15.0
+├── gatsby-plugin-react-helmet@6.15.0
+├── gatsby-plugin-sharp@5.15.0
+├── gatsby-plugin-styled-components@6.15.0
+├── gatsby-transformer-sharp@5.15.0
+├── gatsby@5.15.0
+├── node-fetch@2.7.0
+├── react-dom@18.3.1
+├── react-helmet@6.1.0
+├── react@18.3.1
+└── styled-components@6.1.19
+
+
+4. Critical File Checksums:
+7c32d0c0f8eaae5b63862c5a6cd903ff *package.json
+814978f2b8a7d09b2c7060b8a00a9589 *gatsby-config.js
+
+5. Build Test:
+  │                                                                │
+  ╰────────────────────────────────────────────────────────────────╯
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[Ginfo Done building in 8.7674868 sec
+
+
+Pages
+
+└ src/pages/index.js
+  └   /
+
+  ╭────────────────────────────────────────────────────────────────╮
+  │                                                                │
+  │   (SSG) Generated at build time                                │
+  │ D (DSG) Deferred static generation - page generated at runtime │
+  │ ∞ (SSR) Server-side renders at runtime (uses getServerData)    │
+  │ λ (Function) Gatsby function                                   │
+  │                                                                │
+  ╰────────────────────────────────────────────────────────────────╯
+
+
+6. Data Pipeline Status:
+Fetch script exists
+API Key present: true
+📡 Fetching with timeout/retry...
+✅ Success: 10 candidates
+💰 Created: 5 contributions
+💾 Saved to: C:\mega-project\src\data\moneyTrail.json
+
+7. API Key Check:
+✓ API Key configured

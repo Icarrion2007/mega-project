@@ -6,4 +6,4 @@
 # Gatsby & Node Build Directories
 node_modules/
 public/
-.cache/
+.cache/.env\n.env.development\n.env.*

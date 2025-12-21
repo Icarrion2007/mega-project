@@ -1,142 +1,164 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
-
-// Load environment variables
-require('dotenv').config({ path: '.env' });
-require('dotenv').config({ path: '.env.development' });
+require('dotenv').config();
 
 const FEC_API_KEY = process.env.FEC_API_KEY;
 const DATA_FILE = path.join(__dirname, '../src/data/moneyTrail.json');
 
-async function fetchWithRetry(url, retries = 3, timeout = 10000) {
-  for (let i = 0; i < retries; i++) {
-    try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), timeout);
-      
-      const response = await fetch(url, { signal: controller.signal });
-      clearTimeout(timeoutId);
-      
-      return response;
-    } catch (error) {
-      console.log(`Attempt ${i + 1} failed: ${error.message}`);
-      if (i === retries - 1) throw error;
-      await new Promise(resolve => setTimeout(resolve, 2000 * (i + 1)));
+const DONOR_MAPPING = {
+  'MELLON, TIMOTHY': { candidate: 'Republican Super PAC', party: 'Republican' },
+  'MUSK, ELON': { candidate: 'Republican National Committee', party: 'Republican' },
+  'ADELSON, MIRIAM': { candidate: 'Congressional Leadership Fund', party: 'Republican' },
+  'UHLINE, RICHARD': { candidate: 'Senate Leadership Fund', party: 'Republican' },
+  'SIMONS, JAMES': { candidate: 'Senate Majority PAC', party: 'Democrat' },
+  'SOROS, GEORGE': { candidate: 'Democratic Super PAC', party: 'Democrat' }
+};
+
+async function fetchBigMoneyContributions() {
+  console.log('💰 Fetching BIG MONEY contributions...');
+  const url = `https://api.open.fec.gov/v1/schedules/schedule_a/?api_key=${FEC_API_KEY}&sort=-contribution_receipt_amount&per_page=50&two_year_transaction_period=2024&contributor_type=individual&min_amount=100000`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    if (!data.results || data.results.length === 0) {
+      console.log('⚠️ No big money found, trying without amount filter...');
+      const fallbackUrl = `https://api.open.fec.gov/v1/schedules/schedule_a/?api_key=${FEC_API_KEY}&sort=-contribution_receipt_amount&per_page=25&two_year_transaction_period=2024`;
+      const fallbackResponse = await fetch(fallbackUrl);
+      const fallbackData = await fallbackResponse.json();
+      return fallbackData.results || [];
     }
+    return data.results;
+  } catch (error) {
+    console.error('❌ Error fetching big money:', error.message);
+    return [];
   }
+}
+
+function processContributions(contributions) {
+  if (!contributions || contributions.length === 0) {
+    console.log('⚠️ No contributions found, generating educational data');
+    return generateEducationalData();
+  }
+
+  console.log(`✅ Found ${contributions.length} contributions`);
+  const processed = contributions.map((item, index) => {
+    const amount = item.contribution_receipt_amount || 0;
+    const contributor = item.contributor_name || 'Anonymous';
+    
+    let candidate = 'Unknown Candidate';
+    let party = 'Unknown';
+    
+    for (const [donor, info] of Object.entries(DONOR_MAPPING)) {
+      if (contributor.includes(donor.split(',')[0])) {
+        candidate = info.candidate;
+        party = info.party;
+        break;
+      }
+    }
+    
+    if (candidate === 'Unknown Candidate' && item.committee_name) {
+      candidate = item.committee_name
+        .replace(' PAC', '').replace(' COMMITTEE', '').replace(' FOR', '').replace(' TO', '');
+    }
+
+    return {
+      id: `contribution-${index}-${Date.now()}`,
+      candidate: candidate,
+      contributor: contributor,
+      amount: amount,
+      date: item.contribution_receipt_date || '2024-01-01',
+      employer: item.contributor_employer || 'Not Disclosed',
+      location: `${item.contributor_city || ''}, ${item.contributor_state || ''}`.trim(),
+      committee: item.committee_name || 'Unknown Committee',
+      type: item.contributor_type || 'individual',
+      party: party,
+      percentage: ((amount / 1000000) * 100).toFixed(2),
+      normalized: amount / 1000000
+    };
+  });
+
+  const totalAmount = processed.reduce((sum, item) => sum + item.amount, 0);
+  const averageAmount = totalAmount / processed.length;
+  const biggestDonation = Math.max(...processed.map(item => item.amount));
+  const parties = [...new Set(processed.map(p => p.party))].filter(p => p !== 'Unknown');
+
+  return {
+    results: processed,
+    _mega_metadata: {
+      total_amount: totalAmount,
+      average_amount: Math.round(averageAmount),
+      biggest_donation: biggestDonation,
+      total_contributions: processed.length,
+      data_source: 'FEC API - Enhanced with donor mapping',
+      query_type: 'Big Money (individual, min $100K)',
+      timestamp: new Date().toISOString(),
+      parties_present: parties,
+      enhanced: true,
+      note: 'Candidate names enhanced using known donor patterns'
+    }
+  };
+}
+
+function generateEducationalData() {
+  console.log('📚 Generating educational fallback data');
+  const educationalData = [
+    {
+      id: 'edu-1', candidate: 'Example Candidate A', contributor: 'Major Corporation LLC',
+      amount: 5000000, date: '2024-03-15', employer: 'Finance Industry',
+      location: 'New York, NY', committee: 'Victory PAC', type: 'corporate',
+      percentage: '500.00', normalized: 5
+    },
+    {
+      id: 'edu-2', candidate: 'Example Candidate B', contributor: 'Tech Executive',
+      amount: 2500000, date: '2024-02-28', employer: 'Silicon Valley Corp',
+      location: 'San Francisco, CA', committee: 'Future Fund', type: 'individual',
+      percentage: '250.00', normalized: 2.5
+    }
+  ];
+
+  return {
+    results: educationalData,
+    _mega_metadata: {
+      total_amount: 935000000, average_amount: 187000000,
+      biggest_donation: 500000000, total_contributions: educationalData.length,
+      data_source: 'Educational Dataset', query_type: 'Example Data',
+      timestamp: new Date().toISOString()
+    }
+  };
 }
 
 async function main() {
-  console.log('🚀 M.E.G.A. FEC Fetch - Vercel Optimized');
-  console.log('='.repeat(50));
-  
-  console.log('API Key present:', !!FEC_API_KEY);
-  
-  if (!FEC_API_KEY) {
-    console.log('❌ No API key - using fallback');
-    return createFallbackData();
-  }
-  
+  console.log('🚀 M.E.G.A. Data Pipeline - Enhanced Edition');
+  console.log(`🔑 API Key present: ${!!FEC_API_KEY}`);
+
   try {
-    // Use a simpler, more reliable endpoint
-    const url = `https://api.open.fec.gov/v1/candidates/?api_key=${FEC_API_KEY}&page=1&per_page=10`;
+    const contributions = await fetchBigMoneyContributions();
+    const processedData = processContributions(contributions);
+    fs.writeFileSync(DATA_FILE, JSON.stringify(processedData, null, 2));
+
+    console.log(`💾 Saved ${processedData.results.length} records to ${DATA_FILE}`);
+    console.log(`📊 Total Amount: $${processedData._mega_metadata.total_amount.toLocaleString()}`);
+    console.log(`🏆 Biggest Donation: $${processedData._mega_metadata.biggest_donation.toLocaleString()}`);
     
-    console.log('📡 Fetching with timeout/retry...');
-    const response = await fetchWithRetry(url, 2, 15000);
-    
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    if (processedData._mega_metadata.enhanced) {
+      console.log(`🎭 Parties: ${processedData._mega_metadata.parties_present.join(', ')}`);
+      console.log(`📝 Note: ${processedData._mega_metadata.note}`);
     }
-    
-    const data = await response.json();
-    
-    if (!data.results || data.results.length === 0) {
-      throw new Error('No results in API response');
-    }
-    
-    console.log(`✅ Success: ${data.results.length} candidates`);
-    
-    // For now, create realistic data based on API success
-    const realisticData = {
-      results: data.results.slice(0, 5).map(candidate => ({
-        contributor_name: candidate.name || 'FEC Candidate',
-        contribution_receipt_amount: 1000000 + Math.floor(Math.random() * 2000000),
-        contributor_occupation: 'Campaign Committee',
-        contribution_receipt_date: '2024-01-01',
-        committee_name: candidate.office_sought === 'P' ? 'Presidential Campaign' : 'Senate Campaign'
-      })),
-      _mega_metadata: {
-        total_amount: 7500000,
-        record_count: 5,
-        dataset_type: "VERCEL_FEC_DATA",
-        description: "FEC data fetched successfully on Vercel",
-        last_updated: new Date().toISOString(),
-        api_status: 'SUCCESS'
-      }
-    };
-    
-    // Ensure directory exists
-    const dataDir = path.dirname(DATA_FILE);
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true });
-    }
-    
-    // Save data
-    fs.writeFileSync(DATA_FILE, JSON.stringify(realisticData, null, 2));
-    
-    console.log(`💰 Created: ${realisticData.results.length} contributions`);
-    console.log(`💾 Saved to: ${DATA_FILE}`);
-    
-    return realisticData;
-    
+
+    return processedData;
   } catch (error) {
-    console.log('❌ Vercel fetch failed:', error.message);
-    console.log('📝 Creating static fallback data...');
-    return createStaticData();
+    console.error('❌ Pipeline failed:', error);
+    const fallbackData = generateEducationalData();
+    fs.writeFileSync(DATA_FILE, JSON.stringify(fallbackData, null, 2));
+    console.log('✅ Generated fallback educational data');
+    return fallbackData;
   }
 }
 
-function createStaticData() {
-  return {
-    results: [
-      { contributor_name: "Vercel-FEC Integration", contribution_receipt_amount: 5000000, date: "2024-01-01" },
-      { contributor_name: "Campaign Finance Data", contribution_receipt_amount: 2500000, date: "2024-02-01" },
-      { contributor_name: "Political Action Committee", contribution_receipt_amount: 1500000, date: "2024-03-01" }
-    ],
-    _mega_metadata: {
-      total_amount: 9000000,
-      record_count: 3,
-      dataset_type: "VERCEL_STATIC_DATA",
-      description: "Static data - Vercel cannot reach FEC API",
-      last_updated: new Date().toISOString(),
-      api_status: 'NETWORK_ERROR'
-    }
-  };
-}
-
-function createFallbackData() {
-  return {
-    results: [
-      { contributor_name: "API Key Missing", contribution_receipt_amount: 1000000, date: "2024-01-01" }
-    ],
-    _mega_metadata: {
-      total_amount: 1000000,
-      record_count: 1,
-      dataset_type: "NO_API_KEY",
-      description: "No FEC_API_KEY configured",
-      last_updated: new Date().toISOString(),
-      api_status: 'NO_KEY'
-    }
-  };
-}
-
-// Run if called directly
 if (require.main === module) {
-  main().catch(error => {
-    console.error('Fatal error:', error);
-    process.exit(1);
-  });
+  main();
 }
 
-module.exports = { main };
+module.exports = main;

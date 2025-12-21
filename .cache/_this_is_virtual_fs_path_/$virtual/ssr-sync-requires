@@ -1,0 +1,5 @@
+exports.ssrComponents = {
+  "component---cache-dev-404-page-js": require("C:\\mega-project\\.cache\\dev-404-page.js"),
+  "component---src-pages-index-js": require("C:\\mega-project\\src\\pages\\index.js")
+  }
+
