@@ -1,0 +1,10 @@
+Based on your actual data, you have these fields:
+- contributor_name (in data)
+- contribution_receipt_amount (in data)
+- contribution_receipt_date (in data)
+- committee.name (in committee object)
+- committee.committee_type_full (in committee object)
+- contributor_employer (in data)
+- contributor_occupation (in data)
+
+Your GraphQL schema should only query these fields.

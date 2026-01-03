@@ -2,8 +2,22 @@
 .env.development
 .env.production
 .env
+.env.*
 
 # Gatsby & Node Build Directories
 node_modules/
 public/
-.cache/.env\n.env.development\n.env.*
+.cache/
+
+# System files (CRITICAL - Fixes the 'nul' error)
+nul
+NUL
+
+# Generated data files
+src/data/*.json
+
+# Temporary/backup files
+*.log
+debug-*.js
+*_snapshot.*
+*.backup*

@@ -1,0 +1,60 @@
+-rw-r--r-- 1 tgibb 197609   2302 Dec 21 20:41 config_snapshot.json
+-rw-r--r-- 1 tgibb 197609  24432 Dec 21 20:41 core_logic_snapshot.js
+-rwxr-xr-x 1 tgibb 197609    830 Dec 21 14:44 diagnostic.sh*
+-rw-r--r-- 1 tgibb 197609    921 Dec 19 23:02 direct_api_test.js
+-rw-r--r-- 1 tgibb 197609   1088 Dec 21 15:13 gatsby-config.js
+-rw-r--r-- 1 tgibb 197609   4355 Dec 21 19:50 gatsby-node.js
+-rw-r--r-- 1 tgibb 197609 701342 Dec 21 19:54 package-lock.json
+-rw-r--r-- 1 tgibb 197609   1214 Dec 21 15:08 package.json
+-rw-r--r-- 1 tgibb 197609   1870 Dec 19 22:43 test_fec_key.js
+-rw-r--r-- 1 tgibb 197609   1585 Dec 19 22:51 test_fec_key_simple.js
+-rw-r--r-- 1 tgibb 197609    490 Dec 21 20:45 validate.js
+-rw-r--r-- 1 tgibb 197609    115 Dec 20 09:20 vercel-force-deploy.md
+-rw-r--r-- 1 tgibb 197609    716 Dec 20 11:25 verification-results.json
+scripts/:
+total 103
+drwxr-xr-x 1 tgibb 197609    0 Dec 21 19:18 ./
+drwxr-xr-x 1 tgibb 197609    0 Dec 21 20:48 ../
+-rw-r--r-- 1 tgibb 197609 8336 Dec 17 20:22 analyze-patterns.js
+-rw-r--r-- 1 tgibb 197609 9304 Dec 20 10:50 build-reporter.js
+-rw-r--r-- 1 tgibb 197609 6631 Dec 21 19:18 fetch-money-trail-BACKUP-20251221.js
+-rw-r--r-- 1 tgibb 197609 5934 Dec 21 15:59 fetch-money-trail-BACKUP.js
+-rw-r--r-- 1 tgibb 197609 7623 Dec 21 19:19 fetch-money-trail.js
+-rw-r--r-- 1 tgibb 197609 4894 Dec 19 21:34 fetch-money-trail.js.bak
+-rw-r--r-- 1 tgibb 197609  864 Dec 20 10:36 fix-data.js
+-rw-r--r-- 1 tgibb 197609   34 Dec 20 09:32 github-explorer.js
+-rw-r--r-- 1 tgibb 197609 4003 Dec 20 10:14 quick-diagnostic.js
+-rw-r--r-- 1 tgibb 197609 1815 Dec 20 10:21 simple-diagnostic.js
+drwxr-xr-x 1 tgibb 197609    0 Dec 17 20:27 src/
+-rw-r--r-- 1 tgibb 197609  403 Dec 20 11:54 test-api-key.js
+-rw-r--r-- 1 tgibb 197609 6309 Dec 20 11:25 test-verification.js
+-rw-r--r-- 1 tgibb 197609   21 Dec 20 11:42 test.js
+-rw-r--r-- 1 tgibb 197609 1523 Dec 20 12:22 vercel-api-test-fixed.js
+-rw-r--r-- 1 tgibb 197609 1470 Dec 20 12:21 vercel-api-test.js
+-rw-r--r-- 1 tgibb 197609  666 Dec 20 09:20 vercel-build-verify.js
+
+src/components/:
+total 108
+drwxr-xr-x 1 tgibb 197609     0 Dec 21 19:44 ./
+drwxr-xr-x 1 tgibb 197609     0 Dec 21 15:09 ../
+-rw-r--r-- 1 tgibb 197609  1315 Dec 11 22:12 Footer.js
+-rw-r--r-- 1 tgibb 197609  6500 Dec 18 00:13 GlobalMapRoadmap.js
+-rw-r--r-- 1 tgibb 197609  1815 Dec 11 21:08 Header.js
+-rw-r--r-- 1 tgibb 197609  3891 Dec 17 23:55 Hero.js
+-rw-r--r-- 1 tgibb 197609  4910 Dec 18 00:18 HowItWorks.js
+-rw-r--r-- 1 tgibb 197609  2808 Dec 17 23:03 Principles.js
+-rw-r--r-- 1 tgibb 197609  4681 Dec 18 00:23 QuickStats.js
+-rw-r--r-- 1 tgibb 197609  6808 Dec 21 19:44 TriangulationPreview-BACKUP.js
+-rw-r--r-- 1 tgibb 197609 12454 Dec 21 20:02 TriangulationPreview.js
+-rw-r--r-- 1 tgibb 197609 18431 Dec 19 23:39 TriangulationPreview.js.backup
+-rw-r--r-- 1 tgibb 197609  1897 Dec 11 22:10 Vision.js
+-rw-r--r-- 1 tgibb 197609  4537 Dec 17 22:07 VisualizationHub.js
+drwxr-xr-x 1 tgibb 197609     0 Dec 17 21:24 visualizations/
+
+src/data/:
+total 52
+drwxr-xr-x 1 tgibb 197609     0 Dec 17 20:24 ./
+drwxr-xr-x 1 tgibb 197609     0 Dec 21 15:09 ../
+-rw-r--r-- 1 tgibb 197609 14879 Dec 17 19:13 debug_contributions.json
+-rw-r--r-- 1 tgibb 197609 21665 Dec 21 20:02 moneyTrail.json
+-rw-r--r-- 1 tgibb 197609  2921 Dec 17 20:25 patternAnalysis.json

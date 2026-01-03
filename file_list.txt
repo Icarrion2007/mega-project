@@ -1,0 +1,481 @@
+./.cache/.eslintrc.json
+./.cache/_this_is_virtual_fs_path_/$virtual/async-requires.js
+./.cache/_this_is_virtual_fs_path_/$virtual/match-paths.json
+./.cache/_this_is_virtual_fs_path_/$virtual/sync-requires.js
+./.cache/api-runner-browser-plugins.js
+./.cache/api-runner-browser.js
+./.cache/api-runner-ssr.js
+./.cache/api-ssr-docs.js
+./.cache/app.js
+./.cache/async-requires.js
+./.cache/babelState.json
+./.cache/commonjs/api-runner-browser-plugins.js
+./.cache/commonjs/api-runner-browser.js
+./.cache/commonjs/api-runner-ssr.js
+./.cache/commonjs/api-ssr-docs.js
+./.cache/commonjs/app.js
+./.cache/commonjs/context-utils.js
+./.cache/commonjs/create-content-digest-browser-shim.js
+./.cache/commonjs/css-to-object.js
+./.cache/commonjs/debug-log.js
+./.cache/commonjs/default-html.js
+./.cache/commonjs/dev-loader.js
+./.cache/commonjs/develop-static-entry.js
+./.cache/commonjs/dummy.js
+./.cache/commonjs/emitter.js
+./.cache/commonjs/ensure-resources.js
+./.cache/commonjs/error-overlay-handler.js
+./.cache/commonjs/fast-refresh-overlay/components/accordion.js
+./.cache/commonjs/fast-refresh-overlay/components/build-error.js
+./.cache/commonjs/fast-refresh-overlay/components/code-frame.js
+./.cache/commonjs/fast-refresh-overlay/components/dev-ssr-error.js
+./.cache/commonjs/fast-refresh-overlay/components/error-boundary.js
+./.cache/commonjs/fast-refresh-overlay/components/getserverdata-error.js
+./.cache/commonjs/fast-refresh-overlay/components/graphql-errors.js
+./.cache/commonjs/fast-refresh-overlay/components/hooks.js
+./.cache/commonjs/fast-refresh-overlay/components/overlay.js
+./.cache/commonjs/fast-refresh-overlay/components/runtime-errors.js
+./.cache/commonjs/fast-refresh-overlay/components/use-id.js
+./.cache/commonjs/fast-refresh-overlay/helpers/focus-trap.js
+./.cache/commonjs/fast-refresh-overlay/helpers/keys.js
+./.cache/commonjs/fast-refresh-overlay/helpers/lock-body.js
+./.cache/commonjs/fast-refresh-overlay/helpers/match.js
+./.cache/commonjs/fast-refresh-overlay/index.js
+./.cache/commonjs/fast-refresh-overlay/style.js
+./.cache/commonjs/fast-refresh-overlay/utils.js
+./.cache/commonjs/find-path.js
+./.cache/commonjs/gatsby-browser-entry.js
+./.cache/commonjs/head/components/fire-callback-in-effect.js
+./.cache/commonjs/head/constants.js
+./.cache/commonjs/head/head-export-handler-for-browser.js
+./.cache/commonjs/head/head-export-handler-for-ssr.js
+./.cache/commonjs/head/utils.js
+./.cache/commonjs/loader.js
+./.cache/commonjs/loading-indicator/index.js
+./.cache/commonjs/loading-indicator/indicator.js
+./.cache/commonjs/loading-indicator/style.js
+./.cache/commonjs/navigation.js
+./.cache/commonjs/normalize-page-path.js
+./.cache/commonjs/page-renderer.js
+./.cache/commonjs/pages.json
+./.cache/commonjs/polyfill-entry.js
+./.cache/commonjs/prefetch.js
+./.cache/commonjs/production-app.js
+./.cache/commonjs/public-page-renderer-dev.js
+./.cache/commonjs/public-page-renderer-prod.js
+./.cache/commonjs/public-page-renderer.js
+./.cache/commonjs/query-result-store.js
+./.cache/commonjs/react-dom-utils.js
+./.cache/commonjs/react-lifecycles-compat.js
+./.cache/commonjs/redirect-utils.js
+./.cache/commonjs/redirects.json
+./.cache/commonjs/register-service-worker.js
+./.cache/commonjs/root.js
+./.cache/commonjs/route-announcer-props.js
+./.cache/commonjs/server-utils/writable-as-promise.js
+./.cache/commonjs/shadow-portal.js
+./.cache/commonjs/slice.js
+./.cache/commonjs/slice/context.js
+./.cache/commonjs/slice/inline-slice.js
+./.cache/commonjs/slice/server-slice-renderer.js
+./.cache/commonjs/slice/server-slice.js
+./.cache/commonjs/socketIo.js
+./.cache/commonjs/ssr-builtin-trackers/child_process.js
+./.cache/commonjs/ssr-builtin-trackers/fs.js
+./.cache/commonjs/ssr-builtin-trackers/http.js
+./.cache/commonjs/ssr-builtin-trackers/http2.js
+./.cache/commonjs/ssr-builtin-trackers/https.js
+./.cache/commonjs/ssr-builtin-trackers/tracking-unsafe-module-wrapper.js
+./.cache/commonjs/ssr-develop-static-entry.js
+./.cache/commonjs/static-entry.js
+./.cache/commonjs/static-query.js
+./.cache/commonjs/strip-prefix.js
+./.cache/context-utils.js
+./.cache/create-content-digest-browser-shim.js
+./.cache/css-to-object.js
+./.cache/debug-log.js
+./.cache/default-html.js
+./.cache/dev-loader.js
+./.cache/develop-static-entry.js
+./.cache/dummy.js
+./.cache/emitter.js
+./.cache/ensure-resources.js
+./.cache/error-overlay-handler.js
+./.cache/fast-refresh-overlay/components/accordion.js
+./.cache/fast-refresh-overlay/components/build-error.js
+./.cache/fast-refresh-overlay/components/code-frame.js
+./.cache/fast-refresh-overlay/components/dev-ssr-error.js
+./.cache/fast-refresh-overlay/components/error-boundary.js
+./.cache/fast-refresh-overlay/components/getserverdata-error.js
+./.cache/fast-refresh-overlay/components/graphql-errors.js
+./.cache/fast-refresh-overlay/components/hooks.js
+./.cache/fast-refresh-overlay/components/overlay.js
+./.cache/fast-refresh-overlay/components/runtime-errors.js
+./.cache/fast-refresh-overlay/components/use-id.js
+./.cache/fast-refresh-overlay/helpers/focus-trap.js
+./.cache/fast-refresh-overlay/helpers/keys.js
+./.cache/fast-refresh-overlay/helpers/lock-body.js
+./.cache/fast-refresh-overlay/helpers/match.js
+./.cache/fast-refresh-overlay/index.js
+./.cache/fast-refresh-overlay/style.js
+./.cache/fast-refresh-overlay/utils.js
+./.cache/find-path.js
+./.cache/functions/manifest.json
+./.cache/gatsby-browser-entry.js
+./.cache/head/components/fire-callback-in-effect.js
+./.cache/head/constants.js
+./.cache/head/head-export-handler-for-browser.js
+./.cache/head/head-export-handler-for-ssr.js
+./.cache/head/utils.js
+./.cache/loader.js
+./.cache/loading-indicator/index.js
+./.cache/loading-indicator/indicator.js
+./.cache/loading-indicator/style.js
+./.cache/match-paths.json
+./.cache/navigation.js
+./.cache/normalize-page-path.js
+./.cache/page-renderer.js
+./.cache/page-ssr/routes/component---src-pages-index-js.js
+./.cache/page-ssr/routes/render-page.js
+./.cache/pages.json
+./.cache/polyfill-entry.js
+./.cache/prefetch.js
+./.cache/production-app.js
+./.cache/public-page-renderer-dev.js
+./.cache/public-page-renderer-prod.js
+./.cache/public-page-renderer.js
+./.cache/query-result-store.js
+./.cache/react-dom-utils.js
+./.cache/react-lifecycles-compat.js
+./.cache/redirect-utils.js
+./.cache/redirects.json
+./.cache/register-service-worker.js
+./.cache/root.js
+./.cache/route-announcer-props.js
+./.cache/server-utils/writable-as-promise.js
+./.cache/shadow-portal.js
+./.cache/slice.js
+./.cache/slice/context.js
+./.cache/slice/inline-slice.js
+./.cache/slice/server-slice-renderer.js
+./.cache/slice/server-slice.js
+./.cache/socketIo.js
+./.cache/ssr-builtin-trackers/child_process.js
+./.cache/ssr-builtin-trackers/fs.js
+./.cache/ssr-builtin-trackers/http.js
+./.cache/ssr-builtin-trackers/http2.js
+./.cache/ssr-builtin-trackers/https.js
+./.cache/ssr-builtin-trackers/tracking-unsafe-module-wrapper.js
+./.cache/ssr-develop-static-entry.js
+./.cache/static-entry.js
+./.cache/static-query.js
+./.cache/strip-prefix.js
+./.cache/sync-requires.js
+./config_snapshot.json
+./core_logic_snapshot.js
+./diagnostic.sh
+./direct_api_test.js
+./gatsby-config.js
+./gatsby-node.js
+./package-lock.json
+./package.json
+./public/app-f8dfc5371c101779ff81.js
+./public/chunk-map.json
+./public/component---src-pages-index-js-55def068661b51af943f.js
+./public/component---src-pages-index-js-c26e8f34c3ec8e8c5d93.js
+./public/framework-197707782de349fbf44d.js
+./public/page-data/app-data.json
+./public/page-data/index/page-data.json
+./public/page-data/sq/d/1742332450.json
+./public/page-data/sq/d/514576324.json
+./public/webpack-runtime-0ffb1b81a3865c6a2e96.js
+./public/webpack-runtime-6c3ea9b60486ea3b00e6.js
+./public/webpack.stats.json
+./public/~partytown/debug/partytown-atomics.js
+./public/~partytown/debug/partytown-media.js
+./public/~partytown/debug/partytown-sandbox-sw.js
+./public/~partytown/debug/partytown-sw.js
+./public/~partytown/debug/partytown-ww-atomics.js
+./public/~partytown/debug/partytown-ww-sw.js
+./public/~partytown/debug/partytown.js
+./public/~partytown/partytown-atomics.js
+./public/~partytown/partytown-media.js
+./public/~partytown/partytown-sw.js
+./public/~partytown/partytown.js
+./scripts/analyze-patterns.js
+./scripts/build-reporter.js
+./scripts/fetch-money-trail-BACKUP-20251221.js
+./scripts/fetch-money-trail-BACKUP.js
+./scripts/fetch-money-trail.js
+./scripts/fix-data.js
+./scripts/quick-diagnostic.js
+./scripts/simple-diagnostic.js
+./scripts/test-api-key.js
+./scripts/test-verification.js
+./scripts/test.js
+./scripts/vercel-api-test-fixed.js
+./scripts/vercel-api-test.js
+./scripts/vercel-build-verify.js
+./src/components/Footer.js
+./src/components/GlobalMapRoadmap.js
+./src/components/Header.js
+./src/components/Hero.js
+./src/components/HowItWorks.js
+./src/components/Principles.js
+./src/components/QuickStats.js
+./src/components/TriangulationPreview-BACKUP.js
+./src/components/TriangulationPreview.js
+./src/components/Vision.js
+./src/components/VisualizationHub.js
+./src/components/visualizations/ContributionSizeChart.js
+./src/components/visualizations/GeographicMap.js
+./src/components/visualizations/RecipientFlowChart.js
+./src/data/debug_contributions.json
+./src/data/moneyTrail.json
+./src/data/patternAnalysis.json
+./src/pages/index.js
+./test_fec_key.js
+./test_fec_key_simple.js
+./vercel-force-deploy.md
+./verification-results.json
+--- File Checksums ---
+a70803ed7f0345f375b32c15655e5fb369d0555b2fe8e1762c16713953ee1a6b *./.cache/.eslintrc.json
+fb4bdeb1b12148014987bc6d2aaeadfed5f711ba9c6ef1f0a5c69d4aeda468df *./.cache/api-runner-browser-plugins.js
+7d2fff2e33c336c17060ebde8d84ae8d58c49eb930625319971108fdf31211af *./.cache/api-runner-browser.js
+ac1f0c2fdd3c65067c54ee4db4e20584e6158437734e78bb44924f32d292bb68 *./.cache/api-runner-ssr.js
+a76c0701182a7430e8b6f0d00a578753cf401ac4eb1cb7f44434455c7911ae31 *./.cache/api-ssr-docs.js
+3cfa814fd0646edaf6220edf057e2e5b6cbc429fa2399b78473a007380a08572 *./.cache/app.js
+935513f23f7d86b6ef417bd68f42a3c2fd72831e2dfb651bb2a730c888df86b3 *./.cache/async-requires.js
+1fb08a463f08c111d41c0e26e5d32d62718eab2cda264cf36b5589e23c37e6de *./.cache/babelState.json
+ab59ece2b60a4d7cd531bd73024620c7eeeab4daab689a7d91e8d1f7c1b520db *./.cache/commonjs/api-runner-browser-plugins.js
+4369f35fa6190a2763ecf20011dd53e8d52d47803b85b03a10a62680c5e29441 *./.cache/commonjs/api-runner-browser.js
+eb71a8a3ee688464e6b809827ca3ac06c4849d7bb1e1ada19e4e7fc42d5ab59f *./.cache/commonjs/api-runner-ssr.js
+320fec91a3d51d558611887a13569987ca579a236e7dd1325e3ccb21d22eab0b *./.cache/commonjs/api-ssr-docs.js
+536a3d4fb591b59ae6ac4388b5c1c6694b2ba5d2d3762d6c4c94d1ea7306de69 *./.cache/commonjs/app.js
+a022ad19b6f95708ed4551b1f5cb199649acacac18ebcba4aaf0c983fc9490b0 *./.cache/commonjs/context-utils.js
+8aa6b4b196c524edf1a2e92615f67e924a55f350c73c9e7add87a4aaebe7537b *./.cache/commonjs/create-content-digest-browser-shim.js
+54f5f37700e28528fb6348312d1af88233971f4e3883f641756dc6bf5461c3e9 *./.cache/commonjs/css-to-object.js
+34ae464292133e965435d4d275be59e39f4334d3a5c531427b49d254db6815e3 *./.cache/commonjs/debug-log.js
+e235ce1ac8975507509c8a3a0f42d26d604fae4de93381178bedeebcf2cc389c *./.cache/commonjs/default-html.js
+cae550741bc110f285ff9b0468e79886922a15b6c90d9acee9774607b9d63c3e *./.cache/commonjs/dev-loader.js
+a21867b2d191b697f652d6ecb4a5d49f2126d00c0cabfc5fc2cdb6a9146f98c1 *./.cache/commonjs/develop-static-entry.js
+669d92bd466a31345539756b19e80bde3ac453ab590d3e119a6632f993546d6f *./.cache/commonjs/dummy.js
+497044aa1ea28f067b2122d383cf283c1a65338e971d40ffd3fb572f880220f5 *./.cache/commonjs/emitter.js
+f1e865e5447e1ee6df721afc0af6f9dfc20c09256bec3298e9a31db7e149d11b *./.cache/commonjs/ensure-resources.js
+a32f2ac4a375c6d665af9a08daebdb9fb0ae248d2113546935043e72d0fc98ea *./.cache/commonjs/error-overlay-handler.js
+4e97aa872816d7d2d427ae4ae582796629ce80fee5c4a8eef93214d496627fcd *./.cache/commonjs/fast-refresh-overlay/components/accordion.js
+1fcff1787bbefd71859a7a436db300d494b983fe6aa42030195561f80d08e6c2 *./.cache/commonjs/fast-refresh-overlay/components/build-error.js
+46ec1961e624bdfb7acf4f4a5aa1b40fda41413e32300bb2f6ed5b39656a0df5 *./.cache/commonjs/fast-refresh-overlay/components/code-frame.js
+aea89c8ea57a5146678b700dad39e56859840c485e82119cea9cbd45a7071b3f *./.cache/commonjs/fast-refresh-overlay/components/dev-ssr-error.js
+d1abfcbcb595ceea28ef55d2987570557ce79779ef0e28b84c9ff347dd0e585a *./.cache/commonjs/fast-refresh-overlay/components/error-boundary.js
+48eb5305651cd354fe64678c9059f75f60b905117003a89355e60ad5e583f823 *./.cache/commonjs/fast-refresh-overlay/components/getserverdata-error.js
+f09e0606ce02623701f3f41dfa87a581ef6b181778d2aefb6d93b54157f13806 *./.cache/commonjs/fast-refresh-overlay/components/graphql-errors.js
+92297f01e8cafd5d56ebe85e03f550f1b5a164cd890ced52ec780fc10ef31590 *./.cache/commonjs/fast-refresh-overlay/components/hooks.js
+0581d9714a02f0f26a60e3c934ef72c60db2dd46e5683463529b5b129fd76e37 *./.cache/commonjs/fast-refresh-overlay/components/overlay.js
+4ec4213f4d9b8d0ae042ce186f84f24b1c597eb72a7502de5a6746f749ccbdb1 *./.cache/commonjs/fast-refresh-overlay/components/runtime-errors.js
+a2b0392a8fe5a292d4db79eedb915a4288ac167da26aa8f31e2e0660ae012fe8 *./.cache/commonjs/fast-refresh-overlay/components/use-id.js
+74db7b23336a92bae565ffb8995d6c6645e857754760131546221b8d6e336781 *./.cache/commonjs/fast-refresh-overlay/helpers/focus-trap.js
+0dc0ee2364b38351b06ddacfc966838dfb8c28703fb303d0d1dfe510c79301a4 *./.cache/commonjs/fast-refresh-overlay/helpers/keys.js
+e48e7b5953d7589aae1de5066b913d07e6c24999a4cccc0b66f4b85d4b9c4a84 *./.cache/commonjs/fast-refresh-overlay/helpers/lock-body.js
+a8492e3f150a9945eb4deac4474c132f862a0c02c3e2b4cc37e704b77a33cb52 *./.cache/commonjs/fast-refresh-overlay/helpers/match.js
+9c5720b46b86f5aa4d4fca60399ad2607df16da11faf5f696aae3e24f1456816 *./.cache/commonjs/fast-refresh-overlay/index.js
+fff21524dc4243746f92244787f631cfa7d8b93445b5f24b5042db35d7f8a748 *./.cache/commonjs/fast-refresh-overlay/style.js
+8afac115dcec968d1c95a52a5c01a719f9e58ce0f726f3442b61c99affe9c9b2 *./.cache/commonjs/fast-refresh-overlay/utils.js
+65db3cd0043be46b910113ac4d8d677b61b08d5743e3d808d6fc60ff03940a0b *./.cache/commonjs/find-path.js
+36a29087f4ff53b115e5ff79e58e0ed9b35c5abf26e74a1724f7b46a45bdcb0d *./.cache/commonjs/gatsby-browser-entry.js
+da22903f3f56e2344426d2d3400c935a1495ff3fae304f523c4c2ed500858498 *./.cache/commonjs/head/components/fire-callback-in-effect.js
+fc76ba92e450c8e6c1c9ae0e43bdfb33f75d9720ce58e58ec0bece237f092f93 *./.cache/commonjs/head/constants.js
+418df3c9b07ba5b76dc077a75ed94ffae24e6a6a217d4bfbe95de09f1593e2d0 *./.cache/commonjs/head/head-export-handler-for-browser.js
+7c62e4c6e0c52b4be4cd5b60335c99f569e69a61de64d6e667dc1a409079206b *./.cache/commonjs/head/head-export-handler-for-ssr.js
+d1fb3c0f0eed295c93565398bffce1c0314aa3b7e9371883c92dde0b4fd04686 *./.cache/commonjs/head/utils.js
+5909e42d58ec67100aa777df410bd6ed39000fa0cf95f0b1052512e7962e6c52 *./.cache/commonjs/loader.js
+4a259509d56c9a930da05e0fd054c801fa772cb97b2a4870d230062cb9067850 *./.cache/commonjs/loading-indicator/index.js
+9fb09bf17ca76e21157675b2ce7856c4ed5eb10959868de42957ea76c2c91383 *./.cache/commonjs/loading-indicator/indicator.js
+e012b5d8602d86ab11bd847e7c45cc537407411c39b3bcbe13247e45e6442642 *./.cache/commonjs/loading-indicator/style.js
+8bd54ca724eda8cf6046f812626a751d72f32620e5e9fd0567531f1877660b74 *./.cache/commonjs/navigation.js
+512592fcb249078917fca527ba25747edb0a81358a7f4b30c7cfa0bed2f99a87 *./.cache/commonjs/normalize-page-path.js
+e6eef3821f7a921aed9d27ff333e7770a4efbecbb7d696dbda50f2398cc44de9 *./.cache/commonjs/page-renderer.js
+37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570 *./.cache/commonjs/pages.json
+5af9896bbfa23b541df9a7aaa98a9050bb0ff76de3661bac3fb1d4267ef26c03 *./.cache/commonjs/polyfill-entry.js
+db1a3ab9d74460d8adc3aa7efe912cf29c8036e70f934e4a04c1b3784bf172ab *./.cache/commonjs/prefetch.js
+fb829379c042b4a5b8b41b3c242315fab3fe36d39c62218c12a44910f807026d *./.cache/commonjs/production-app.js
+d69ecf1b123fff5934979b6e67d66ed177de72e58097e14851a21aff5751bc69 *./.cache/commonjs/public-page-renderer-dev.js
+9afaf1ad4b709734694f18b7da7780b973e91b89d9a0838ccae49a164b67c5cf *./.cache/commonjs/public-page-renderer-prod.js
+4e14ec58f3a06ab156a2a3e8196a2fe0ffc31aef7d17cf1f23a91c3758813d15 *./.cache/commonjs/public-page-renderer.js
+e05e516531c3da7211c77f9b2af8f1dde20320336ef8e9df02f402a4ac704055 *./.cache/commonjs/query-result-store.js
+fe62caa22169cdb2c012b2ce052e1fe546a33cf285c21115f63a660d12a51c47 *./.cache/commonjs/react-dom-utils.js
+4d9457f4f5c878b8edab066cd23bb8f46d88037855fe5ea8608941592d5d1d89 *./.cache/commonjs/react-lifecycles-compat.js
+71cd9428bd1c6fe66627700c3f2c50af90b123633974732b01b70399eacdf6ed *./.cache/commonjs/redirect-utils.js
+37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570 *./.cache/commonjs/redirects.json
+05ec1a2a7f15b5f324d3c69d7fd5a8943543efba079b57cca4673b46e8293d3c *./.cache/commonjs/register-service-worker.js
+7276a5b6b37a0176bd8f1f5df787fdfdf37773c9c358fc7c7bace18c16473c82 *./.cache/commonjs/root.js
+37876841b95cf15ae4f6df29c750f719460a0987d7fd22995d3f541a51efd6fd *./.cache/commonjs/route-announcer-props.js
+dc22334e0f870954e6f4f32ba54f18230fb7e19338069530743be0aec19453fe *./.cache/commonjs/server-utils/writable-as-promise.js
+477bd8b9a90d4c94ca75db75098c5338be63537bbd84ce1ec0ee92181e253c3c *./.cache/commonjs/shadow-portal.js
+d0cf477c85dbd7a9f59473f19827faa753d4f84764b86dcb297b2bb6a410269c *./.cache/commonjs/slice/context.js
+d9776017c8c2de9fa76f04ad39b71e98d0ba1f0d78e1aa50673f4444ce3eb3db *./.cache/commonjs/slice/inline-slice.js
+50f470879eed4674e0c5cac7d03cfcb4fd3ed0ce6160341f73b83a9f1ee865af *./.cache/commonjs/slice/server-slice-renderer.js
+a93d434651cb5f25a1553d6a482d986eb83ec8b92298921bd88fa8677707fe27 *./.cache/commonjs/slice/server-slice.js
+a39e15233af135a7541512a98e4089d36f76bf7b6dcc8a2248c4811c79761011 *./.cache/commonjs/slice.js
+827ac51ac5e8b2143cfd3000ce81db4df35b4d5b3e0abb9c83ce87daa68a08df *./.cache/commonjs/socketIo.js
+fa0aabe06d95c98fc7278c34db7b8f2352b08efa88cd96626e215b7257dfbe76 *./.cache/commonjs/ssr-builtin-trackers/child_process.js
+a45ac67e39c5ab29fe46122d1997d2b2ed877568ccb26443c670567aa6f6cc61 *./.cache/commonjs/ssr-builtin-trackers/fs.js
+e3fba79c5eca0966d02c87fae7ede9f2c5f4ac4739cbd815f7c40f666fb31e59 *./.cache/commonjs/ssr-builtin-trackers/http.js
+e7058c6ff013e343d29b8fb226583d759a2fd25fc51fd3fe7c19183d8661b431 *./.cache/commonjs/ssr-builtin-trackers/http2.js
+93c617dd54cb97a1a2539ada8816a242d7b376d0545746cd7f7838240cb47d2b *./.cache/commonjs/ssr-builtin-trackers/https.js
+0a6c66e392c5240a48de51255c913c3afd9d244b3556cc541ad392bf3099e3ea *./.cache/commonjs/ssr-builtin-trackers/tracking-unsafe-module-wrapper.js
+6c41e35551a0e9423a74e2bccea0ba09606558019213bfb9c4818bf7f592e505 *./.cache/commonjs/ssr-develop-static-entry.js
+1e63c5c63d75230d096d66c7b7ab99359745cf31de7d9b584f9d3764dd35a584 *./.cache/commonjs/static-entry.js
+c7d3590d95e8e2965c14ad82f3f4a25a6864528863b5b55d54f8e33c8412ecb4 *./.cache/commonjs/static-query.js
+127d6aa96e8067858297e54a03b1c700d85134562afe3c42db0b4d2b9b30f898 *./.cache/commonjs/strip-prefix.js
+9f88cd354684aee7c5e672170460bb6aceea89141ed956cc37253eee5601c4be *./.cache/context-utils.js
+f68713e4b46bd51579a6a6a408826f769cfbd805ecc0a2bacc91619b99480785 *./.cache/create-content-digest-browser-shim.js
+3aec34db014c4e76399fb0dcb707c29bceda42a406f2d7fc7ae1f1a3461235ce *./.cache/css-to-object.js
+849cab415f5b32e02fc0017bde47f4e85d39d333651239d56071ffd4c09597bb *./.cache/debug-log.js
+3131e5c3787b12b7fa84bff4fb638c11ee4fa0dbfd38d1b78f1f73720235ca46 *./.cache/default-html.js
+ce39c2a2b22048ed6329c1bbe14b89778e9619cca7753b7e198ad32f64fab6eb *./.cache/dev-loader.js
+e99a2f59f4d816bd7c2782f226888c8fe3835c3cc98234c18489c008e0ed6382 *./.cache/develop-static-entry.js
+8b29e2beae45e49022b8ecfd3a50e50c8b71b1b04703a9def958e0729cf122ce *./.cache/dummy.js
+163561e045dd374d8a939398513f55a41448b5f72b7e0d3a9908122c6e964753 *./.cache/emitter.js
+5032462ea4bed8bd9dc53bef95da392a077a3ff8e60fa6ea9ebb6e82a56bc80c *./.cache/ensure-resources.js
+37ec64f2e68a41609a6043c850cc764b6b4e7b0331ac5212d16b77d4a2e9d5fa *./.cache/error-overlay-handler.js
+44cf2d4ea97cf24dda6da6de35a98f754b9e993d3107046c05e15e8c7c42fb38 *./.cache/fast-refresh-overlay/components/accordion.js
+540f368ad97ccd4d024c564b9c3abb6e64fb937328fdcd57317157142c964b40 *./.cache/fast-refresh-overlay/components/build-error.js
+46cf8da43ee514082cf999e7e97d3c1bb27bf9794aa66227e0563ea5cda06279 *./.cache/fast-refresh-overlay/components/code-frame.js
+aa7a892e4fef82783772a33e1e3952a6d4132fbf82b7df22e9a166c357e54c0e *./.cache/fast-refresh-overlay/components/dev-ssr-error.js
+3ad20ba4a0a56cec6cef291a52f6f2a8600eaf2219cbb0310821c7a533897454 *./.cache/fast-refresh-overlay/components/error-boundary.js
+86219cee8b4f78943895f30399890bffe932b37a6850623705d0eea034b4c66f *./.cache/fast-refresh-overlay/components/getserverdata-error.js
+ad639fe3e9b8dd3f6b82951676da8d7c15561f5ed28a115e4e34df6dcbaaf5cc *./.cache/fast-refresh-overlay/components/graphql-errors.js
+b62bdd4352fddb2b87c5363b9c500396e9235aeca4fd5aff39dc9615e1ae2a70 *./.cache/fast-refresh-overlay/components/hooks.js
+04d648aba029e2117ac580e95d46b0d3e1ec5b73a850460b87a1f594547d4945 *./.cache/fast-refresh-overlay/components/overlay.js
+5a3115bc4550dbd5066d9df0ecc06650b47e94f4c297a8e8a7ce6f239111f3a4 *./.cache/fast-refresh-overlay/components/runtime-errors.js
+999257ff48337382f36f69d02a57f183ef7cd3c24f48971a7fe9f493d8097cf4 *./.cache/fast-refresh-overlay/components/use-id.js
+f4baee376462824d8ad67fead91d5b808c9dae3023e97ba50f55dfffcbe80789 *./.cache/fast-refresh-overlay/helpers/focus-trap.js
+df38e7282c2be05212d4402dd0737eef0dd5c632b90294a531a8ad330f1d0cdf *./.cache/fast-refresh-overlay/helpers/keys.js
+5bc3f1aee2945c90c5752f05411a02edc8b5860534aab30b001b1b91b7bd927a *./.cache/fast-refresh-overlay/helpers/lock-body.js
+4aae3442905fcb1a56173874c93aadffb86bb82e2bd3453ebc70e2a679e9d609 *./.cache/fast-refresh-overlay/helpers/match.js
+f6353e88fbe676e4a02f1974532baaa17c8e6dc1dd1bf0c260e1dc368ccc3bf8 *./.cache/fast-refresh-overlay/index.js
+bdc38ecdd5d2ade3be1fa01751e6c174921d749e0ec2f3eda4946f4bfc11e0c9 *./.cache/fast-refresh-overlay/style.js
+1835b1d1702ab9a27f8203ec2d840c59a30b8468d2f0903c271d348cd844d89e *./.cache/fast-refresh-overlay/utils.js
+757e8390faedc362f8e5778d9e45025328bbc179bb6f929419e933b8d093d44d *./.cache/find-path.js
+4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945 *./.cache/functions/manifest.json
+33f24ec84b7e4a969fb23bea135940846070771435a1261c82217121ed99533b *./.cache/gatsby-browser-entry.js
+89848dafe26613a49a2383d42a3f5ad5e93c6f7f17fdd20df395c57c90e50926 *./.cache/head/components/fire-callback-in-effect.js
+4ff439ddc0a2238b278dda6324d2a5110b90e462f1926685562896a7f25ec926 *./.cache/head/constants.js
+fb13433a1d92a799cb0ae3fc2c0f5e3901bf3a51264f851458ad3867a239d609 *./.cache/head/head-export-handler-for-browser.js
+3bfd322f98d5c96acaee6832d5a591fc700e174173d97c04698d01bcc39d5c6d *./.cache/head/head-export-handler-for-ssr.js
+989ce140496f00332747379aaa98b562d2d2dd8cfccb3e43dc6321b6f28d55b0 *./.cache/head/utils.js
+5472d47ddf740e725f3374462afd6312bcc48c2bb5e5b5552c96d8f9739de8e8 *./.cache/loader.js
+a34cce6f74c67858f6631f4d478c0f0701647c55e43c937774f956a1f9c2f328 *./.cache/loading-indicator/index.js
+9c6123b4eb4c9f32b1b2389ca203115a6ecac97b544f6f248907e983f448bfb4 *./.cache/loading-indicator/indicator.js
+a6863cbc09c7124f5771175d0d82473f43744ec3e0f3bf285b36c294c79ddd1e *./.cache/loading-indicator/style.js
+4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945 *./.cache/match-paths.json
+b487c453fc64cf5a4f77aded66e2c65c78503b8b03d43e41a08098dc5028bd34 *./.cache/navigation.js
+57da407036bfd895bf37f02235c85ac15ad2b1f4a86fd041de3caa7a85881d5d *./.cache/normalize-page-path.js
+66f752b589bfb2681311b14b7ec73a0e385cc95a72fb17823f94f1388d6328e5 *./.cache/page-renderer.js
+555b6b2cc12513ca9bd9cf07b0c0e28bf37b2c8e5c31485a15406168616d6b12 *./.cache/page-ssr/routes/component---src-pages-index-js.js
+f4cb017aa36971bafa92fafa1cc4423c3c072a67aedb2d4f955437dfcc22157e *./.cache/page-ssr/routes/render-page.js
+37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570 *./.cache/pages.json
+6f96ba3dae5a95a4723b8139e741d33d47db0cfb126ba6fbd37de14cbfd8c5bb *./.cache/polyfill-entry.js
+4b9644fe96b0c52e59fd7ba7d1c922f47469556833ed948f16c5c5566c6756fc *./.cache/prefetch.js
+5c548239235dd0738403898b6f8fd7c9747d5e526386b560757e0163cda710e1 *./.cache/production-app.js
+8ba99ae25587eb8e71c3cecb044846fe22db4d513f80206676c01b1fee1ede9d *./.cache/public-page-renderer-dev.js
+a3cd96adf8edff30cc53c4a3616b6de7256fe46654f05abe339bf58b8c80c66b *./.cache/public-page-renderer-prod.js
+1e25753bc29cbac04372fd37abb9688986d7a235a6b8d35faa6436b31311233c *./.cache/public-page-renderer.js
+26dadb3c29ac0a84775d403ccc6b0508bb05416b82105ad332be448b72f1a641 *./.cache/query-result-store.js
+251f7bc105ffe65ae3087ee47d4e353871026dd4af5980ec70088b7fad020c89 *./.cache/react-dom-utils.js
+358e654cb4788e732abaf0ea3ee9bd598f05ef99b23c772316142d824e2ef946 *./.cache/react-lifecycles-compat.js
+2aa305b19d1648a2d64115b07bfb06873ccdecb4eef958242f4d7923997f905d *./.cache/redirect-utils.js
+4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945 *./.cache/redirects.json
+7bf4f04e4d05cc496c5a4d1460eb67e659a7d1ac46a60bcad319838de6fcbc2b *./.cache/register-service-worker.js
+0ac65723109efdce3d501325c30798befd8d14dcec4b1fbbb2bd8159da6e006a *./.cache/root.js
+4511954938560e4c5916c5b0a35d7284b8d663abcfd3500e7f7a18f582dcd130 *./.cache/route-announcer-props.js
+a048797ab566024a43db520d87ca2b66c7c309916c75101fd178dcde61baba2e *./.cache/server-utils/writable-as-promise.js
+8da5ceee4cd8a50fade9e4244695914539cd93d662ca35650e625c59ac506a80 *./.cache/shadow-portal.js
+a40528306cfa152034213105bde22bbde84e1e06b166e56c1fce308f17699141 *./.cache/slice/context.js
+ff15b528b3dd630c59a0e102b5304e0a13f78eaa54d08181eb1d0ea8e99cc1df *./.cache/slice/inline-slice.js
+d3a9511f39c5630dc16a09e9e3512b1163dbcf358f34485c975cc19e62563037 *./.cache/slice/server-slice-renderer.js
+7e0c43c2b76915e785229a1f72c903fdf22093a86308ba41c11627c2b939b541 *./.cache/slice/server-slice.js
+9c505bad6a3b31ff475e11ae325db920514b5b15a97b3e2723aff9f4362050f8 *./.cache/slice.js
+93600021f605f7dde1c9fda5b4685d9412c7c4b51a7e5dd66118ca5223437ec2 *./.cache/socketIo.js
+54fd7796accc38ae736bfcaafda12da61b23b6b3bd5bd1db6d0fbcc1ab5e44a8 *./.cache/ssr-builtin-trackers/child_process.js
+36eae7e31f623623611abc9b96caabbee2c7f158c801e8faa87fa1b99fe6ae1e *./.cache/ssr-builtin-trackers/fs.js
+9907f27cae19c4af4cf6623b3416c1350a47586526611710404bcc1fcc481ef5 *./.cache/ssr-builtin-trackers/http.js
+201186156140e44aa4365552b3dfe4dddfb49f0cff7352f796289cca81063e88 *./.cache/ssr-builtin-trackers/http2.js
+55b56f8d498da2fdda53092daf3e0503323ee9d60e8a898c543996a5f29eefc4 *./.cache/ssr-builtin-trackers/https.js
+e01af846ee87a99ee13c8b685b99598c5184fa8d311f03d449b7949b6c2e8242 *./.cache/ssr-builtin-trackers/tracking-unsafe-module-wrapper.js
+e7b475761a2966a6e922eeb9f01923083d5ddea6e13dbea7b0ea81ed1d6ac72f *./.cache/ssr-develop-static-entry.js
+805d3da7bda23b23daf81811f57bfdf1ece4d15c72e355df1e2edb04d22a27cd *./.cache/static-entry.js
+57ab109bed516f6e5a031987c98720116c1a1b5388afd8b7981ba096c0475816 *./.cache/static-query.js
+cb4dae1f421571ffa89a96a24ee297dd4077a3f15e6c815f6d2d377bc9efcbbf *./.cache/strip-prefix.js
+b126019fd35eb7fc68b98fdf8390b095606a7f5ac95f5977a193cf956b551e3c *./.cache/sync-requires.js
+935513f23f7d86b6ef417bd68f42a3c2fd72831e2dfb651bb2a730c888df86b3 *./.cache/_this_is_virtual_fs_path_/$virtual/async-requires.js
+4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945 *./.cache/_this_is_virtual_fs_path_/$virtual/match-paths.json
+b126019fd35eb7fc68b98fdf8390b095606a7f5ac95f5977a193cf956b551e3c *./.cache/_this_is_virtual_fs_path_/$virtual/sync-requires.js
+0519feb93f87841f1b865dfe085762ab5a845fe38cfddb938582d95a3408670f *./config_snapshot.json
+de4ecec7ab173a2f49c18ab506f21a4143d148b33b7f4c06190ed829e7234856 *./core_logic_snapshot.js
+ff7f495d9638f52511fc67e9a4fe902ea78fbd5e71ecd39d5d5bfa4e76f531ed *./diagnostic.sh
+8b1ca7fd305992317b4636ff37a64b7d04312e3f30088d23392593e6fb919901 *./direct_api_test.js
+baf539b0e49dc821902fe083216dc4848774fd7531645edcea1b2e90ab866128 *./gatsby-config.js
+db8c78c3a919539bb50ea730d9e4aa75bc7d0ef967050d31921628e05bbb0b5a *./gatsby-node.js
+f6b0d3b916effa12eec87b89f7297bfab8d1eec1709e665f60683eb4c1655961 *./package-lock.json
+fdad701137b01d00b3c860ded68e48bb7b3d20e7c810385db76509b40dd5cc20 *./package.json
+f72c29edea7dd0bf1561c42f7c2936a1f9cf13330ba8b46b5f9d5bcac03c9b36 *./public/app-f8dfc5371c101779ff81.js
+0c00d26543cea9dcd68182302ed68a1d199eb562546d6ebd5a40142c582375fc *./public/chunk-map.json
+6dd0b5034fc0bd9ff730eb91c19bde848bcbe4feb28f0795cc9a9c18f7b09882 *./public/component---src-pages-index-js-55def068661b51af943f.js
+d122e58d67c059de78595825a389c3fc827195a4721ef628c89542d82ce80d88 *./public/component---src-pages-index-js-c26e8f34c3ec8e8c5d93.js
+7ead251420717fbec7b629572781c7583abee84a7284b32ba439208b8f25f8c8 *./public/framework-197707782de349fbf44d.js
+0e11aa7b08142b46793ddcb0168156aa5b96e0d4621ce916eb2589a5f4e1f90b *./public/page-data/app-data.json
+90d26cb26fc2bedc956cf74beab80b059b7aac33ac88b98838a67fcb3dba228e *./public/page-data/index/page-data.json
+d2ccf6eac8b4b7069b5e949095c573b291fda6d01089b32b72404a290a3e7bbc *./public/page-data/sq/d/1742332450.json
+b29a8ac57f5436580d18b29b59916eb1e8f38b9d8922985b97dbc057aba04d25 *./public/page-data/sq/d/514576324.json
+bdd1c13811c40d33af858f0d52df74d3beea24174497a948cce7185c1ad7cd5a *./public/webpack-runtime-0ffb1b81a3865c6a2e96.js
+6bb5c4cdec3a56b87c41a63f29e1b9cdb08e23a03478d96de26b7d86f3a0d802 *./public/webpack-runtime-6c3ea9b60486ea3b00e6.js
+f00ea041a94dc19bdf673d83411cccacb8d84fcc201f55697ef1e31314608469 *./public/webpack.stats.json
+3cefa0271be27baf9d6d75a123fc5c4a7674a77c3e4a8cf552c4ad98e129caf9 *./public/~partytown/debug/partytown-atomics.js
+caa05aca35e240de3471a9a54f43c37e561ab7afaf433f6ae48f95bf99618d16 *./public/~partytown/debug/partytown-media.js
+551b902af2990037b978d754f31bc32419566234917ddb8e095332b023bb0fe6 *./public/~partytown/debug/partytown-sandbox-sw.js
+90ed857c011ac051090889d0c7776cdcef85a247046b0faaff4412f780911da3 *./public/~partytown/debug/partytown-sw.js
+24f3bafe0aac2c2afb0b054a1e0804d3a41e4adb9341f566c6dedf2cc8035bc0 *./public/~partytown/debug/partytown-ww-atomics.js
+b540364ec9c9982d187e0a8bd3557ec0c618dadcb3fb5d8904c41c6f52ceb346 *./public/~partytown/debug/partytown-ww-sw.js
+eae893f723344651059a1d1b8bb3d6dc9254fbf28f2cf258ecdc5344e8ee8e43 *./public/~partytown/debug/partytown.js
+1b696bd2067bb6a419640dc77fca32104ff9ec1aad8f4a9b1a08ec00359eb225 *./public/~partytown/partytown-atomics.js
+507008ddd6f85fecdd80c3b9624cd456fa62fe71e03859bfadb8395d8eda9efb *./public/~partytown/partytown-media.js
+56fca61060a916892c956ca8feabf83fa607353893a50fa8bc70027a8328764d *./public/~partytown/partytown-sw.js
+a5dab5f77f7c9efae71e8f0d205340077d3e2f70ae5d971ad41ba6fd18a266d9 *./public/~partytown/partytown.js
+5fb854eb1916f5ff8b5c37324fe9ad6cd4223f084b995ef725fa27bf9f1593e6 *./scripts/analyze-patterns.js
+571cb5123b990a93fdf010e0c5d2bfd30475992f152b1897cd52210479ede587 *./scripts/build-reporter.js
+b4878a051a90ba1d2cfbf6ba7770161889bc7a45b930e2f5e7acf171790723cf *./scripts/fetch-money-trail-BACKUP-20251221.js
+d33de9b24e13bba6d49a6edd85cd950291d4ba7a2dd6207445ee367d31abcec8 *./scripts/fetch-money-trail-BACKUP.js
+b8c6d0b09d51eda670295ae561004c8281d873bcdcb33df33779f846d003d207 *./scripts/fetch-money-trail.js
+50541255df5a21f62dc45e42b9bbbcbc7ccd0e18fd6f66603f1dc09beefabb59 *./scripts/fix-data.js
+251fc0355ab9a1f13f05856b0aaa5e1cbb6bd4f229f113808f5f3e67611f498b *./scripts/quick-diagnostic.js
+1852ca823e6eb1b75a26a51e64d16cfc12b2d48603cc9c158270ef210e73f09d *./scripts/simple-diagnostic.js
+45386f5157ffe896e3c94ff6fefc46f88a074ebe303ed1e2066a565a5ff50515 *./scripts/test-api-key.js
+57e627d48834e3012c18ce2b9c2d7f1c92746c3da8a7efbe4e93c6aafafdbc4a *./scripts/test-verification.js
+8a5f0beda1fb5f9cf56432cf08e0afb4d19850e547f658277a7b71ea51b955d2 *./scripts/test.js
+4a9882d5184e437e718de5c7a0816bb9598c7e19ec35b8005f54d0cfad58c94c *./scripts/vercel-api-test-fixed.js
+7cee77b81868b96586fd78a1ec92a2204fa14d49c1f05e8501cccf399549b948 *./scripts/vercel-api-test.js
+8ed3c58af706e643ccc0b862105bac23500a25efe222f5694aec0bf88d098eff *./scripts/vercel-build-verify.js
+70151c546317520d709966dcf083eaec1abf9b2692229144311d9240b7262beb *./src/components/Footer.js
+05f086a37cedc5287061b31e60b8dd85ab52efea13e83e7eb8e6728f558eb470 *./src/components/GlobalMapRoadmap.js
+6df9a64b6b8296225af263281b67ce4d2b8371c2719a5f444002a2805520b9b0 *./src/components/Header.js
+2c02981378c391cbd90fe4ee31a2295656838431a20cc880364aaba8f1ce172a *./src/components/Hero.js
+1ab9875d079c71615c50dceb9574e25687de3fc710b0f30a4a0e7521d063e7a1 *./src/components/HowItWorks.js
+0ef2191e19664ce87bcc7226d344485fb3d1790e41558000772f3fc66583a332 *./src/components/Principles.js
+b5d4b3886086fb132c2736bf21b687c59b9ab2d0d4ce8a862232858d843ecaa4 *./src/components/QuickStats.js
+f64c8fa67894b1aa440a268baf825815e71ed9d11b347966d6da4eb877fb72d0 *./src/components/TriangulationPreview-BACKUP.js
+e4b533bfee3c2ee0e995552bf33396d2dbe600549210c56a60644b899021a0e5 *./src/components/TriangulationPreview.js
+0c31d53118360f8fa54393dbba3988a6c61efef31043397216c7b10c55547d10 *./src/components/Vision.js
+6e84607da9439ef31cfe6cdc4d8b7362a121f6be9d2c8c65d02adbed609ca619 *./src/components/VisualizationHub.js
+f4ef3f9179b02af4672a163e2c4fec43d9bfc938ee70266e0635f460a7305f6b *./src/components/visualizations/ContributionSizeChart.js
+b9d00b3a54aed12ddc7f5f397ab7e023940cfe4cf0e1b9a6f656bf1536450856 *./src/components/visualizations/GeographicMap.js
+789005cd4508e15f06d1c7ba584032285b9a20cc77af77c5d9d66949246e85e7 *./src/components/visualizations/RecipientFlowChart.js
+06854130ef7d642641c39f67ae46180127c59a9096617648f7daecc456292545 *./src/data/debug_contributions.json
+ea59f54f563067070c3a11bc356e00179d3819281c824540f8b2648224deeae7 *./src/data/moneyTrail.json
+54ebdb59b4b354cafb398f6d2d543cb4a7e090c4900b74e02233704c94a5ed0c *./src/data/patternAnalysis.json
+cb7d53e3cd02726d0ee9fd1a5c99b52d4aa5f60a3dadf9447b10796e4288378b *./src/pages/index.js
+0e0d7b1e79e851db58f4d14c81487dd08e8d5d24e113be7ac81bd86e95fd1390 *./test_fec_key.js
+f203aa91704fdae940b868ef9a2fffc5153a40bd48341d64cc28d42d48d6dff9 *./test_fec_key_simple.js
+43e858f47dc57dced07e5f6c0dbba8185fff49350eb5dca5c8cf59e104fd329b *./vercel-force-deploy.md
+d5f44d57902e6c4717d4a23a18924f10f517513f852c63d811fdd788db6bc5b9 *./verification-results.json

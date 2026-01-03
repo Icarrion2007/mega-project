@@ -1,0 +1,206 @@
+﻿// scripts/fetch-congress-narrative.js - M.E.G.A. V4.2
+const fetch = require('node-fetch');
+const fs = require('fs');
+const path = require('path');
+require('dotenv').config({ path: '.env.development' });
+
+const CONGRESS_API_KEY = process.env.CONGRESS_API_KEY;
+const BASE_URL = 'https://api.congress.gov/v3';
+const OUTPUT_PATH = path.join(__dirname, '../src/data/congressNarrative.json');
+
+async function fetchCongressNarrative() {
+  console.log('⚖️  M.E.G.A.: Activating Official Narrative Pipeline (Congress.gov)...');
+  
+  if (!CONGRESS_API_KEY) {
+    console.warn('⚠️  CONGRESS_API_KEY not found. Using educational dataset.');
+    return createEducationalDataset();
+  }
+
+  console.log(`🔑 API Key: ${CONGRESS_API_KEY.substring(0, 8)}...`);
+  
+  try {
+    console.log('📡 Requesting live Congress.gov data...');
+    
+    const bills = await fetchRecentBills(10);
+    
+    if (!bills || bills.length === 0) {
+      throw new Error('No bills received from API');
+    }
+    
+    console.log(`✅ Received ${bills.length} live bills from Congress.gov`);
+    
+    const enhancedData = enhanceWithMEGAAnalysis(bills);
+    
+    const outputData = {
+      _mega_metadata: {
+        version: '1.0',
+        fetch_date: new Date().toISOString(),
+        source: 'Congress.gov LIVE API',
+        bill_count: bills.length,
+        triangulation_ready: true,
+        note: 'Live Official Narrative Data'
+      },
+      results: enhancedData
+    };
+    
+    fs.writeFileSync(OUTPUT_PATH, JSON.stringify(outputData, null, 2));
+    console.log(`💾 Saved ${bills.length} live bills to ${OUTPUT_PATH}`);
+    
+    if (bills.length > 0) {
+      console.log('\n📋 SAMPLE LIVE BILLS:');
+      bills.slice(0, 2).forEach((bill, i) => {
+        console.log(`${i+1}. ${bill.title || 'Untitled'} (${bill.number || 'N/A'})`);
+      });
+    }
+    
+    return outputData;
+    
+  } catch (error) {
+    console.error(`❌ Congress.gov API error: ${error.message}`);
+    console.log('🛡️  Falling back to educational dataset...');
+    return createEducationalDataset();
+  }
+}
+
+async function fetchRecentBills(limit = 10) {
+  const url = `${BASE_URL}/bill?format=json&limit=${limit}&api_key=${CONGRESS_API_KEY}`;
+  console.log(`   Fetching: ${url.substring(0, 80)}...`);
+  
+  const response = await fetch(url);
+  
+  if (!response.ok) {
+    throw new Error(`API Error: ${response.status} ${response.statusText}`);
+  }
+  
+  const data = await response.json();
+  return data.bills || [];
+}
+
+function enhanceWithMEGAAnalysis(bills) {
+  return bills.map(bill => {
+    if (!bill) return null;
+    
+    const influenceScore = calculateLegislativeInfluence(bill);
+    const policyArea = detectPolicyArea(bill);
+    const sponsor = bill.sponsors?.[0] || {};
+    
+    return {
+      bill_id: bill.billId || `${bill.type}${bill.number}-${bill.congress}`,
+      bill_number: bill.number,
+      bill_type: bill.type,
+      congress: bill.congress,
+      title: bill.title || 'Untitled Bill',
+      introduced_date: bill.introducedDate,
+      latest_action: bill.latestAction,
+      policy_area: policyArea,
+      
+      sponsor: sponsor,
+      sponsor_name: sponsor.name || 'Unknown',
+      sponsor_party: sponsor.party || 'Unknown',
+      sponsor_state: sponsor.state || 'Unknown',
+      cosponsors: bill.cosponsors || [],
+      cosponsor_count: bill.cosponsors?.length || 0,
+      
+      influence_score: influenceScore,
+      transparency_score: 0.7,
+      progress_score: calculateLegislativeProgress(bill),
+      donor_state_alignment: checkDonorStateAlignment(bill),
+      
+      status: bill.status || 'Introduced',
+      last_action_date: bill.latestAction?.actionDate || bill.introducedDate,
+      
+      raw_bill: bill
+    };
+  }).filter(Boolean);
+}
+
+function calculateLegislativeInfluence(bill) {
+  let score = 0.3;
+  if (bill.type === 'hr' || bill.type === 's') score += 0.2;
+  const cosponsorCount = bill.cosponsors?.length || 0;
+  score += Math.min(cosponsorCount / 100, 0.3);
+  if (bill.latestAction) score += 0.1;
+  return Math.min(score, 0.95);
+}
+
+function detectPolicyArea(bill) {
+  const title = (bill.title || '').toLowerCase();
+  if (title.includes('appropriat') || title.includes('budget')) return 'Budget/Appropriations';
+  if (title.includes('tax') || title.includes('revenue')) return 'Taxation';
+  if (title.includes('health') || title.includes('care')) return 'Healthcare';
+  if (title.includes('energy') || title.includes('climate')) return 'Energy/Environment';
+  if (title.includes('defense') || title.includes('military')) return 'Defense';
+  if (title.includes('immigrat')) return 'Immigration';
+  if (title.includes('technology') || title.includes('digital')) return 'Technology';
+  return 'General Legislation';
+}
+
+function calculateLegislativeProgress(bill) {
+  const status = (bill.status || '').toLowerCase();
+  if (status.includes('enacted') || status.includes('law')) return 1.0;
+  if (status.includes('passed')) return 0.8;
+  if (status.includes('committee')) return 0.5;
+  if (status.includes('introduced')) return 0.3;
+  return 0.2;
+}
+
+function checkDonorStateAlignment(bill) {
+  const sponsorState = bill.sponsors?.[0]?.state;
+  if (!sponsorState) return 'Unknown';
+  const donorStates = ['DC', 'TX', 'CA', 'NY', 'FL', 'VA', 'MD'];
+  return donorStates.includes(sponsorState) ? 'High-Donor State' : 'Other';
+}
+
+function createEducationalDataset() {
+  console.log('📚 Creating educational dataset (API failed)');
+  
+  const educationalBills = [
+    {
+      bill_id: 'hr1-118-edu',
+      bill_number: '1',
+      bill_type: 'hr',
+      congress: 118,
+      title: 'Educational: Sample Appropriations Bill',
+      introduced_date: '2023-01-01',
+      latest_action: { text: 'Referred to Committee', actionDate: '2023-01-15' },
+      policy_area: 'Budget/Appropriations',
+      sponsor: { name: 'Rep. Smith', party: 'R', state: 'TX' },
+      sponsor_name: 'Rep. Smith',
+      sponsor_party: 'R',
+      sponsor_state: 'TX',
+      influence_score: 0.75,
+      transparency_score: 0.8,
+      progress_score: 0.3,
+      donor_state_alignment: 'High-Donor State',
+      status: 'In Committee'
+    }
+  ];
+  
+  const outputData = {
+    _mega_metadata: {
+      version: '1.0',
+      fetch_date: new Date().toISOString(),
+      source: 'EDUCATIONAL DATASET (API Failed)',
+      bill_count: educationalBills.length,
+      triangulation_ready: false,
+      note: 'Educational data - Check API key and connection'
+    },
+    results: educationalBills
+  };
+  
+  fs.writeFileSync(OUTPUT_PATH, JSON.stringify(outputData, null, 2));
+  return outputData;
+}
+
+if (require.main === module) {
+  fetchCongressNarrative().then(() => {
+    console.log('\n' + '='.repeat(60));
+    console.log('⚖️  OFFICIAL NARRATIVE PIPELINE TEST COMPLETE');
+    console.log('='.repeat(60));
+  }).catch(err => {
+    console.error('Fatal error:', err);
+    process.exit(1);
+  });
+}
+
+module.exports = fetchCongressNarrative;

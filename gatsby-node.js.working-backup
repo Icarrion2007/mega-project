@@ -1,0 +1,409 @@
+// gatsby-node.js - ENHANCED VERSION (M.E.G.A. V4.1)
+const path = require('path');
+const fs = require('fs');
+const { exec } = require('child_process');
+const util = require('util');
+const execPromise = util.promisify(exec);
+
+exports.onPreBuild = async ({ reporter }) => {
+  reporter.info('🔍 M.E.G.A.: Activating Enhanced Data Pipeline V4.1...');
+  
+  try {
+    const { stdout, stderr } = await execPromise('node scripts/fetch-money-trail.js');
+    if (stdout) console.log(stdout);
+    if (stderr) console.error(stderr);
+    reporter.success('✅ M.E.G.A.: Data pipeline complete');
+  } catch (error) {
+    reporter.warn(`⚠️ M.E.G.A.: Data pipeline failed: ${error.message}`);
+  }
+};
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  
+  const typeDefs = `
+    type MoneyTrail implements Node @dontInfer {
+      id: ID!
+      candidate: String
+      contributor: String
+      amount: Float
+      date: String
+      employer: String
+      location: String
+      
+      # ENHANCED COMMITTEE METADATA (FULL FEC STRUCTURE)
+      committee: JSON
+      committee_name: String
+      committee_id: String
+      committee_type: String
+      committee_type_full: String
+      committee_type_short: String
+      organization_type: String
+      organization_type_full: String
+      designation: String
+      designation_full: String
+      treasurer_name: String
+      filing_frequency: String
+      is_active: Boolean
+      first_file_date: String
+      last_file_date: String
+      cycles_active: [Int]
+      cycles_has_activity: [Int]
+      cycles_has_financial: [Int]
+      cycles_count: Int
+      state: String
+      state_full: String
+      city: String
+      zip: String
+      street_1: String
+      street_2: String
+      
+      # M.E.G.A. ANALYSIS FIELDS
+      type: String
+      party: String
+      party_full: String
+      influence_score: Float
+      transparency_score: Float
+      longevity_score: Float
+      accountability_score: Float
+      
+      # RAW FEC FIELDS (PRESERVED)
+      contribution_receipt_amount: Float
+      contribution_receipt_date: String
+      contributor_name: String
+      contributor_employer: String
+      contributor_occupation: String
+      contributor_city: String
+      contributor_state: String
+      contributor_zip: String
+      committee_id_raw: String
+      report_type: String
+      report_year: Int
+      schedule_type: String
+      two_year_transaction_period: Int
+      entity_type: String
+      entity_type_desc: String
+      receipt_type: String
+      receipt_type_full: String
+    }
+    
+    type MoneyTrailMetadata implements Node {
+      id: ID!
+      total_amount: Float
+      average_amount: Float
+      biggest_donation: Float
+      total_contributions: Int
+      data_source: String
+      timestamp: String
+      parties_present: [String]
+      parties_full_present: [String]
+      enhanced: Boolean
+      
+      # ENHANCED METADATA
+      committee_types_present: [String]
+      committee_types_full_present: [String]
+      organization_types_present: [String]
+      organization_types_full_present: [String]
+      filing_frequencies: [String]
+      average_longevity: Float
+      transparency_rating: String
+      
+      # LEGACY SUPPORT FIELDS
+      enhanced_count: Int
+      coverage: String
+      note: String
+      
+      # FEC API METADATA
+      api_version: String
+      pagination_count: Int
+      pagination_pages: Int
+      pagination_per_page: Int
+      data_status: String
+      election_cycle: String
+      fetch_date: String
+    }
+  `;
+  
+  createTypes(typeDefs);
+};
+
+exports.sourceNodes = ({ actions, createNodeId, createContentDigest, reporter }) => {
+  const { createNode } = actions;
+  
+  try {
+    const dataPath = path.join(__dirname, 'src/data/moneyTrail.json');
+    if (!fs.existsSync(dataPath)) {
+      throw new Error('moneyTrail.json not found');
+    }
+    
+    const rawData = fs.readFileSync(dataPath, 'utf8');
+    const data = JSON.parse(rawData);
+    
+    if (!data.results || !Array.isArray(data.results)) {
+      throw new Error('Invalid data structure: missing results array');
+    }
+    
+    reporter.info(`📊 M.E.G.A. V4.1: Processing ${data.results.length} contributions with FULL metadata...`);
+    
+    // Enhanced metadata tracking
+    const committeeTypes = new Set();
+    const committeeTypesFull = new Set();
+    const organizationTypes = new Set();
+    const organizationTypesFull = new Set();
+    const filingFrequencies = new Set();
+    const parties = new Set();
+    const partiesFull = new Set();
+    const longevityScores = [];
+    const transparencyScores = [];
+    
+    // Create ENHANCED nodes with ALL FEC metadata
+    data.results.forEach((item, index) => {
+      const nodeId = createNodeId(`money-trail-${index}`);
+      const committee = item.committee || {};
+      
+      // EXTRACT ALL COMMITTEE METADATA
+      const committeeName = committee.name || 'Unknown Committee';
+      const committeeId = committee.committee_id || 'Unknown ID';
+      const committeeType = committee.committee_type || 'Unknown';
+      const committeeTypeFull = committee.committee_type_full || 'Unknown Type';
+      const organizationType = committee.organization_type || 'Unknown';
+      const organizationTypeFull = committee.organization_type_full || 'Unknown Organization';
+      const designation = committee.designation || 'Unknown';
+      const designationFull = committee.designation_full || 'Unknown Designation';
+      const treasurerName = committee.treasurer_name || 'Unknown Treasurer';
+      const filingFrequency = committee.filing_frequency || 'Unknown';
+      const isActive = committee.is_active || false;
+      const firstFileDate = committee.first_file_date || 'Unknown';
+      const lastFileDate = committee.last_file_date || 'Unknown';
+      const cyclesActive = committee.cycles || [];
+      const cyclesActivity = committee.cycles_has_activity || [];
+      const cyclesFinancial = committee.cycles_has_financial || [];
+      const cyclesCount = cyclesActive.length;
+      const state = committee.state || 'Unknown';
+      const stateFull = committee.state_full || 'Unknown State';
+      const city = committee.city || 'Unknown';
+      const zip = committee.zip || 'Unknown';
+      const street1 = committee.street_1 || 'Unknown';
+      const street2 = committee.street_2 || '';
+      
+      // Determine party with enhanced mapping
+      const party = committee.party || item.party || 'Unknown';
+      const partyFull = committee.party_full || 
+                       (party === 'REP' ? 'Republican' : 
+                        party === 'DEM' ? 'Democrat' : 
+                        party === 'IND' ? 'Independent' : 'Unknown');
+      
+      // M.E.G.A. ANALYSIS SCORES
+      const transparencyScore = filingFrequency === 'M' ? 1.0 : 
+                               filingFrequency === 'Q' ? 0.7 : 
+                               filingFrequency === 'T' ? 0.5 : 0.3;
+      
+      const longevityScore = Math.min(cyclesCount / 15, 1.0); // Max 15 cycles
+      const accountabilityScore = treasurerName !== 'Unknown Treasurer' ? 0.8 : 0.3;
+      const influenceScore = 0.6; // Placeholder for future algorithm
+      
+      // Track metadata for analysis
+      committeeTypes.add(committeeType);
+      committeeTypesFull.add(committeeTypeFull);
+      organizationTypes.add(organizationType);
+      organizationTypesFull.add(organizationTypeFull);
+      filingFrequencies.add(filingFrequency);
+      parties.add(party);
+      partiesFull.add(partyFull);
+      longevityScores.push(longevityScore);
+      transparencyScores.push(transparencyScore);
+      
+      // CREATE ENHANCED NODE WITH ALL DATA
+      const enhancedNode = {
+        // Core contribution data
+        candidate: item.contributor_name || 'Unknown Candidate',
+        contributor: item.contributor_name || 'Anonymous',
+        amount: item.contribution_receipt_amount || 0,
+        date: item.contribution_receipt_date || '2024-01-01',
+        employer: item.contributor_employer || 'Unknown',
+        location: `${item.contributor_city || ''}, ${item.contributor_state || ''}`.trim() || 'N/A',
+        type: 'individual_contribution',
+        party: party,
+        party_full: partyFull,
+        
+        // Enhanced committee metadata (FULL PRESERVATION)
+        committee: committee,
+        committee_name: committeeName,
+        committee_id: committeeId,
+        committee_type: committeeType,
+        committee_type_full: committeeTypeFull,
+        committee_type_short: committeeType,
+        organization_type: organizationType,
+        organization_type_full: organizationTypeFull,
+        designation: designation,
+        designation_full: designationFull,
+        treasurer_name: treasurerName,
+        filing_frequency: filingFrequency,
+        is_active: isActive,
+        first_file_date: firstFileDate,
+        last_file_date: lastFileDate,
+        cycles_active: cyclesActive,
+        cycles_has_activity: cyclesActivity,
+        cycles_has_financial: cyclesFinancial,
+        cycles_count: cyclesCount,
+        state: state,
+        state_full: stateFull,
+        city: city,
+        zip: zip,
+        street_1: street1,
+        street_2: street2,
+        
+        // M.E.G.A. analysis scores
+        influence_score: influenceScore,
+        transparency_score: transparencyScore,
+        longevity_score: longevityScore,
+        accountability_score: accountabilityScore,
+        
+        // Preserve ALL raw FEC fields
+        contribution_receipt_amount: item.contribution_receipt_amount,
+        contribution_receipt_date: item.contribution_receipt_date,
+        contributor_name: item.contributor_name,
+        contributor_employer: item.contributor_employer,
+        contributor_occupation: item.contributor_occupation,
+        contributor_city: item.contributor_city,
+        contributor_state: item.contributor_state,
+        contributor_zip: item.contributor_zip,
+        committee_id_raw: item.committee_id,
+        report_type: item.report_type,
+        report_year: item.report_year,
+        schedule_type: item.schedule_type,
+        two_year_transaction_period: item.two_year_transaction_period,
+        entity_type: item.entity_type,
+        entity_type_desc: item.entity_type_desc,
+        receipt_type: item.receipt_type,
+        receipt_type_full: item.receipt_type_full,
+        
+        // Gatsby required fields
+        id: nodeId,
+        parent: null,
+        children: [],
+        internal: {
+          type: 'MoneyTrail',
+          contentDigest: createContentDigest({
+            ...item,
+            _mega_enhanced: {
+              version: '4.1',
+              committeeName,
+              committeeId,
+              committeeTypeFull,
+              organizationTypeFull,
+              transparencyScore,
+              longevityScore
+            }
+          }),
+        },
+      };
+      
+      createNode(enhancedNode);
+    });
+    
+    // Create COMPREHENSIVE metadata node
+    if (data._mega_metadata || data.pagination) {
+      const metadataId = createNodeId('money-trail-metadata');
+      
+      const averageLongevity = longevityScores.length > 0 
+        ? longevityScores.reduce((a, b) => a + b, 0) / longevityScores.length
+        : 0;
+      
+      const averageTransparency = transparencyScores.length > 0
+        ? transparencyScores.reduce((a, b) => a + b, 0) / transparencyScores.length
+        : 0;
+      
+                                averageTransparency > 0.5 ? 'Medium' : 'Low';
+      
+      const metadata = {
+        // Core metrics
+        total_amount: data._mega_metadata?.total_amount || 
+                     data.results.reduce((sum, r) => sum + (r.contribution_receipt_amount || 0), 0),
+        average_amount: data._mega_metadata?.average_amount || 
+                       data.results.reduce((sum, r) => sum + (r.contribution_receipt_amount || 0), 0) / data.results.length,
+        biggest_donation: Math.max(...data.results.map(r => r.contribution_receipt_amount || 0)),
+        total_contributions: data.results.length,
+        data_source: data._mega_metadata?.data_status === 'LIVE' ? 'FEC API - Enhanced V4.1' : 'Educational Data',
+        timestamp: data._mega_metadata?.fetch_date || new Date().toISOString(),
+        parties_present: Array.from(parties),
+        parties_full_present: Array.from(partiesFull),
+        enhanced: true,
+        
+        // Enhanced metadata
+        committee_types_present: Array.from(committeeTypes),
+        committee_types_full_present: Array.from(committeeTypesFull),
+        organization_types_present: Array.from(organizationTypes),
+        organization_types_full_present: Array.from(organizationTypesFull),
+        filing_frequencies: Array.from(filingFrequencies),
+        average_longevity: averageLongevity,
+        
+        // Legacy support
+        enhanced_count: data.results.length,
+        coverage: "100% (M.E.G.A. V4.1 Enhanced Schema)",
+        note: "Full FEC committee metadata preserved for triangulation analysis",
+        
+        // FEC API metadata
+        api_version: data.api_version || '1.0',
+        pagination_count: data.pagination?.count || 0,
+        pagination_pages: data.pagination?.pages || 0,
+        pagination_per_page: data.pagination?.per_page || 100,
+        data_status: data._mega_metadata?.data_status || 'UNKNOWN',
+        election_cycle: data._mega_metadata?.election_cycle || '2024',
+        fetch_date: data._mega_metadata?.fetch_date || new Date().toISOString().split('T')[0],
+        
+        id: metadataId,
+        parent: null,
+        children: [],
+        internal: {
+          type: 'MoneyTrailMetadata',
+          contentDigest: createContentDigest({
+            ...data._mega_metadata,
+            _mega_analysis: {
+              committeeTypes: Array.from(committeeTypesFull),
+              organizationTypes: Array.from(organizationTypesFull),
+              averageLongevity
+            }
+          }),
+        },
+      };
+      
+      createNode(metadata);
+    }
+    
+    reporter.success(`✅ M.E.G.A. V4.1: Created ${data.results.length} ENHANCED nodes`);
+    reporter.info(`📊 Committee Types: ${Array.from(committeeTypesFull).join(', ')}`);
+    reporter.info(`🏛️ Organization Types: ${Array.from(organizationTypesFull).join(', ')}`);
+    
+  } catch (error) {
+    reporter.error(`❌ M.E.G.A. V4.1 Error: ${error.message}`);
+    
+    // Enhanced fallback with diagnostic
+    const fallbackId = createNodeId('money-trail-fallback');
+    createNode({
+      id: fallbackId,
+      candidate: 'M.E.G.A. Diagnostic',
+      contributor: 'System',
+      amount: 1,
+      committee: { 
+        name: 'Diagnostic Committee', 
+        note: 'Enhanced schema fallback',
+        error: error.message
+      },
+      committee_name: 'Diagnostic Committee',
+      committee_type_full: 'Diagnostic',
+      organization_type_full: 'System',
+      transparency_score: 0.5,
+      longevity_score: 0.5,
+      note: `Schema upgrade in progress: ${error.message}`,
+      internal: {
+        type: 'MoneyTrail',
+        contentDigest: createContentDigest('mega-v4.1-fallback'),
+      },
+    });
+  }
+};
+
+exports.onPostBuild = ({ reporter }) => {
+  reporter.info('🏁 M.E.G.A. V4.1: Enhanced build complete. Full metadata preserved for triangulation.');
+};
